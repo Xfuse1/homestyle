@@ -62,22 +62,22 @@ export default function Home() {
 
   const processSteps = [
     {
-      icon: <MessageSquare className="h-8 w-8 text-primary" />,
+      icon: <MessageSquare className="h-8 w-8 text-accent" />,
       title: "Consultation",
       description: "We start with a free consultation to understand your needs and vision.",
     },
     {
-      icon: <DraftingCompass className="h-8 w-8 text-primary" />,
+      icon: <DraftingCompass className="h-8 w-8 text-accent" />,
       title: "Design",
       description: "Our team creates detailed 2D/3D designs for your approval.",
     },
     {
-      icon: <Paintbrush className="h-8 w-8 text-primary" />,
+      icon: <Paintbrush className="h-8 w-8 text-accent" />,
       title: "Execution",
       description: "We manage all finishing work with precision and high-quality materials.",
     },
     {
-      icon: <Wrench className="h-8 w-8 text-primary" />,
+      icon: <Wrench className="h-8 w-8 text-accent" />,
       title: "Handover",
       description: "We deliver your dream space, ready for you to enjoy.",
     },
@@ -136,19 +136,19 @@ export default function Home() {
             <div className="mt-16">
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {processSteps.map((step, index) => (
-                   <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
-                      <CardContent className="p-8">
-                         <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
-                         {step.icon}
-                         </div>
-                         <h3 className="mt-6 font-headline text-xl font-semibold text-primary">
-                         {step.title}
-                         </h3>
-                         <p className="mt-2 text-muted-foreground">
-                         {step.description}
-                         </p>
-                      </CardContent>
-                   </Card>
+                  <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <CardContent className="p-8">
+                      <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
+                        {step.icon}
+                      </div>
+                      <h3 className="mt-6 font-headline text-xl font-semibold text-primary">
+                        {step.title}
+                      </h3>
+                      <p className="mt-2 text-muted-foreground">
+                        {step.description}
+                      </p>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </div>
