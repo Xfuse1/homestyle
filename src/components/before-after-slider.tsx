@@ -42,7 +42,7 @@ export default function BeforeAfterSlider({
             priority
             data-ai-hint={after.imageHint}
             className="object-cover object-left select-none"
-            style={{ width: 'auto', minWidth: '100%', height: '100%', maxWidth: 'none' }}
+            style={{ minWidth: '100%', height: '100%', maxWidth: 'none' }}
           />
         </div>
         
