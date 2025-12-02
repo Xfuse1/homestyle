@@ -26,6 +26,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import BeforeAfterSlider from "@/components/before-after-slider";
 import ContactForm from "@/components/contact-form";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
+import SpotlightCard from "@/components/spotlight-card";
 
 export default function Home() {
   const projectImages = PlaceHolderImages.filter(
@@ -101,7 +102,7 @@ export default function Home() {
               >
                 Designing spaces that reflect you.
               </h1>
-              <p className="mt-4 max-w-5xl mx-auto text-lg text-muted-foreground leading-relaxed text-center md:text-left">
+              <p className="mt-4 max-w-5xl text-lg text-muted-foreground leading-relaxed md:text-left">
                 Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row max-w-5xl mx-auto">
@@ -130,15 +131,17 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {processSteps.map((step, index) => (
-                  <Card
+                  <SpotlightCard
                     key={index}
-                    className="flex items-center gap-4 p-4"
+                    className="rounded-lg border bg-background shadow-sm"
                   >
-                    {step.icon}
-                    <h3 className="font-semibold text-primary">
-                      {step.title}
-                    </h3>
-                  </Card>
+                    <div className="flex items-center gap-4 p-4">
+                      {step.icon}
+                      <h3 className="font-semibold text-primary">
+                        {step.title}
+                      </h3>
+                    </div>
+                  </SpotlightCard>
                 ))}
               </div>
             </div>
