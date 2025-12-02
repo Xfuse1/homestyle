@@ -85,13 +85,12 @@ export default function Home() {
         <section id="home" className="relative h-[90vh] min-h-[600px] w-full overflow-hidden lg:h-screen">
           <div className="absolute inset-0 z-0 h-full w-full">
             <iframe
-              src="https://streamable.com/e/x7zmzb?autoplay=1&muted=1&loop=1"
+              src="https://streamable.com/e/x7zmzb?autoplay=1&muted=1&loop=1&controls=0"
               frameBorder="0"
               allowFullScreen
               allow="autoplay; loop"
-              className="absolute left-0 top-0 h-full w-full"
+              className="pointer-events-none absolute left-0 top-0 h-full w-full"
             ></iframe>
-            <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/50 to-transparent" />
           </div>
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4">
             <div className="grid max-w-2xl gap-6">
