@@ -102,11 +102,14 @@ export default function Home() {
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-start px-4 pt-16">
             <div className="grid max-w-5xl gap-6">
               <h1
+                data-aos="fade-up"
                 className="font-headline text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl lg:leading-snug"
               >
                 Designing spaces that reflect you.
               </h1>
-              <p className="mt-4 max-w-5xl text-lg text-muted-foreground leading-relaxed md:text-left">
+              <p 
+                data-aos="fade-up" data-aos-delay="150"
+                className="mt-4 max-w-5xl text-lg text-muted-foreground leading-relaxed md:text-left">
                 Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row max-w-5xl mx-auto">
@@ -119,10 +122,10 @@ export default function Home() {
         <section id="about" className="bg-card py-20 md:py-32">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
+              <h2 data-aos="fade-up" className="font-headline text-3xl font-bold text-primary md:text-4xl">
                 A Trustworthy Partner for Your Dream Space
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p data-aos="fade-up" data-aos-delay="150" className="mt-4 text-lg text-muted-foreground">
                 Home Stylist is a premier interior design and full finishing
                 studio based in Sohag. We specialize in transforming spaces
                 from concept to reality, handling every detail with precision
@@ -133,22 +136,19 @@ export default function Home() {
             <div className="mt-16">
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {processSteps.map((step, index) => (
-                  <SpotlightCard
-                    key={index}
-                    className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2"
-                  >
-                    <div className="p-8">
-                      <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
-                        {step.icon}
-                      </div>
-                      <h3 className="mt-6 font-headline text-xl font-semibold text-primary">
-                        {step.title}
-                      </h3>
-                      <p className="mt-2 text-muted-foreground">
-                        {step.description}
-                      </p>
-                    </div>
-                  </SpotlightCard>
+                   <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
+                      <CardContent className="p-8">
+                         <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
+                         {step.icon}
+                         </div>
+                         <h3 className="mt-6 font-headline text-xl font-semibold text-primary">
+                         {step.title}
+                         </h3>
+                         <p className="mt-2 text-muted-foreground">
+                         {step.description}
+                         </p>
+                      </CardContent>
+                   </Card>
                 ))}
               </div>
             </div>
@@ -158,13 +158,13 @@ export default function Home() {
         {/* Services Section */}
         <section id="services" className="bg-white py-20 dark:bg-black/10 md:py-32">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">Our Services</h2>
-            <p className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
+            <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">Our Services</h2>
+            <p data-aos="fade-up" data-aos-delay="150" className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
               We offer a complete suite of services to manage your project from start to finish.
             </p>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((service, index) => (
-                <Card key={index} className="transform-gpu text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="transform-gpu text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
                   <CardHeader>
                     {service.icon}
                   </CardHeader>
@@ -182,15 +182,15 @@ export default function Home() {
         <section id="projects" className="py-20 md:py-32">
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <h2 className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">
+              <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">
                 Selected Interiors & Finishing Projects
               </h2>
-              <p className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
+              <p data-aos="fade-up" data-aos-delay="150" className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
                 Explore some of our transformations and see the quality we deliver.
               </p>
             </div>
             {beforeAfterImages.before && beforeAfterImages.after && (
-               <div className="mb-16">
+               <div className="mb-16" data-aos="zoom-in">
                   <h3 className="text-center font-headline text-2xl font-bold text-primary mb-8">Apartment Transformation</h3>
                   <BeforeAfterSlider
                     before={beforeAfterImages.before}
@@ -199,8 +199,8 @@ export default function Home() {
                </div>
             )}
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {projectImages.map((project) => (
-                <Card key={project.id} className="overflow-hidden">
+              {projectImages.map((project, index) => (
+                <Card key={project.id} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden">
                   <CardContent className="p-0">
                     <div className="aspect-w-4 aspect-h-3">
                       <Image
@@ -223,12 +223,14 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-16 text-center">
-              <h3 className="mb-4 font-headline text-2xl font-bold text-primary">
+              <h3 data-aos="fade-up" className="mb-4 font-headline text-2xl font-bold text-primary">
                 Want your space to be our next transformation?
               </h3>
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link href="#contact">Start Your Project</Link>
-              </Button>
+              <div data-aos="fade-up" data-aos-delay="150">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Link href="#contact">Start Your Project</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -238,22 +240,22 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid gap-12 lg:grid-cols-2">
               <div className="space-y-4">
-                <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
+                <h2 data-aos="fade-right" className="font-headline text-3xl font-bold text-primary md:text-4xl">
                   Book Your Free Consultation
                 </h2>
-                <p className="text-lg text-muted-foreground">
+                <p data-aos="fade-right" data-aos-delay="150" className="text-lg text-muted-foreground">
                   Tell us a bit about your project and we’ll get back to you to schedule a free consultation and site visit.
                 </p>
                 <div className="space-y-4 pt-4">
-                  <div className="flex items-center gap-3">
+                  <div data-aos="fade-right" data-aos-delay="200" className="flex items-center gap-3">
                     <Clock className="h-5 w-5 text-accent" />
                     <span>Working Hours: Sat - Thu, 9am - 6pm</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div data-aos="fade-right" data-aos-delay="250" className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-accent" />
                     <span>Location: Sohag, Egypt</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div data-aos="fade-right" data-aos-delay="300" className="flex items-center gap-3">
                      <WhatsappIcon className="h-5 w-5 text-accent" />
                      <a href="https://wa.me/201000000000" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         Chat on WhatsApp
@@ -261,7 +263,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Card className="p-6 shadow-lg">
+              <Card className="p-6 shadow-lg" data-aos="fade-left">
                 <CardContent className="p-0">
                   <ContactForm />
                 </CardContent>
