@@ -132,11 +132,10 @@ export default function Home() {
             </div>
             
             <div className="relative mt-20">
-              <div className="absolute left-0 top-1/2 w-full h-0.5 bg-border -translate-y-1/2 hidden md:block"></div>
               <div className="relative grid grid-cols-1 gap-10 md:grid-cols-4">
                 {processSteps.map((step, index) => (
                   <div key={index} className="relative text-center">
-                    <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-background shadow-md ring-8 ring-card">
+                    <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-background shadow-md">
                       {step.icon}
                     </div>
                     <h3 className="mt-6 font-headline text-xl font-semibold text-primary">{step.title}</h3>
