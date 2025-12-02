@@ -93,7 +93,7 @@ export default function Home() {
               className="pointer-events-none absolute left-0 top-0 h-full w-full"
             ></iframe>
           </div>
-          <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4">
+          <div className="container relative z-10 mx-auto flex h-full flex-col justify-start px-4 pt-16">
             <div className="grid max-w-2xl gap-6">
               <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl">
                 We design a space that reflects you… and deliver it turnkey.
@@ -101,20 +101,6 @@ export default function Home() {
               <p className="max-w-xl text-lg text-muted-foreground">
                 Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-accent" />
-                  <span>Full engineering supervision</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-accent" />
-                  <span>2D + 3D interior design</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-accent" />
-                  <span>Turnkey execution</span>
-                </li>
-              </ul>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Link href="#contact">Book a Free Consultation</Link>
