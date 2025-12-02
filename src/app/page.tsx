@@ -108,9 +108,6 @@ export default function Home() {
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Link href="#contact">Book a Free Consultation</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link href="#projects">View Our Projects</Link>
-                </Button>
               </div>
             </div>
           </div>
