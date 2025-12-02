@@ -94,10 +94,10 @@ export default function Home() {
               style={{ objectFit: 'cover' }}
             ></iframe>
           </div>
-          <div className="container relative z-10 mx-auto flex h-full flex-col justify-start px-4 pt-4 md:pt-8 lg:pt-10">
-            <div className="grid max-w-2xl gap-6">
+          <div className="container relative z-10 mx-auto flex h-full flex-col justify-start px-4 pt-16">
+            <div className="grid max-w-5xl gap-6">
               <h1
-                className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl leading-snug md:leading-snug lg:leading-tight max-w-5xl mx-auto"
+                className="font-headline text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl lg:leading-snug"
               >
                 We design a space that reflects you… and deliver it turnkey.
               </h1>
