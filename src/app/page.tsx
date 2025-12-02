@@ -21,7 +21,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 import Header from "@/components/header";
-import HeroImageScroll from "@/components/hero-image-scroll";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import BeforeAfterSlider from "@/components/before-after-slider";
 import ContactForm from "@/components/contact-form";
@@ -84,8 +83,18 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section id="home" className="relative h-[90vh] min-h-[600px] w-full overflow-hidden lg:h-screen">
-          <div className="container mx-auto flex h-full flex-col justify-center px-4">
-            <div className="z-10 grid max-w-2xl gap-6">
+          <div className="absolute inset-0 z-0 h-full w-full">
+            <iframe
+              src="https://streamable.com/e/x7zmzb?autoplay=1&muted=1&loop=1"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; loop"
+              className="absolute left-0 top-0 h-full w-full"
+            ></iframe>
+            <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/50 to-transparent" />
+          </div>
+          <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4">
+            <div className="grid max-w-2xl gap-6">
               <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl">
                 We design a space that reflects you… and deliver it turnkey.
               </h1>
@@ -116,7 +125,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <HeroImageScroll />
         </section>
 
         {/* About Section */}
