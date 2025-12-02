@@ -62,20 +62,24 @@ export default function Home() {
 
   const processSteps = [
     {
-      icon: <MessageSquare className="h-8 w-8 text-accent" />,
-      title: "Consultation & Site Visit",
+      icon: <MessageSquare className="h-8 w-8 text-primary" />,
+      title: "Consultation",
+      description: "We start with a free consultation to understand your needs and vision.",
     },
     {
-      icon: <DraftingCompass className="h-8 w-8 text-accent" />,
-      title: "2D/3D Design Proposals",
+      icon: <DraftingCompass className="h-8 w-8 text-primary" />,
+      title: "Design",
+      description: "Our team creates detailed 2D/3D designs for your approval.",
     },
     {
-      icon: <Paintbrush className="h-8 w-8 text-accent" />,
-      title: "Materials Selection & Approval",
+      icon: <Paintbrush className="h-8 w-8 text-primary" />,
+      title: "Execution",
+      description: "We manage all finishing work with precision and high-quality materials.",
     },
     {
-      icon: <Wrench className="h-8 w-8 text-accent" />,
-      title: "Execution & Final Handover",
+      icon: <Wrench className="h-8 w-8 text-primary" />,
+      title: "Handover",
+      description: "We deliver your dream space, ready for you to enjoy.",
     },
   ];
 
@@ -114,34 +118,30 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="bg-card py-20 md:py-32">
           <div className="container mx-auto px-4">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="space-y-4 text-center lg:text-left">
-                <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
-                  A Trustworthy Partner for Your Dream Space
-                </h2>
-                <p className="text-lg text-muted-foreground">
-                  Home Stylist is a premier interior design and full finishing
-                  studio based in Sohag. We specialize in transforming spaces
-                  from concept to reality, handling every detail with precision
-                  and care. Our services cover everything from initial 2D/3D
-                  designs and engineering supervision to complete turnkey
-                  delivery, ensuring a seamless and stress-free experience for
-                  our clients.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
+                A Trustworthy Partner for Your Dream Space
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Home Stylist is a premier interior design and full finishing
+                studio based in Sohag. We specialize in transforming spaces
+                from concept to reality, handling every detail with precision
+                and care, ensuring a seamless and stress-free experience for
+                our clients.
+              </p>
+            </div>
+            
+            <div className="relative mt-20">
+              <div className="absolute left-0 top-1/2 w-full h-0.5 bg-border -translate-y-1/2 hidden md:block"></div>
+              <div className="relative grid grid-cols-1 gap-10 md:grid-cols-4">
                 {processSteps.map((step, index) => (
-                  <SpotlightCard
-                    key={index}
-                    className="rounded-lg border bg-background shadow-sm"
-                  >
-                    <div className="flex items-center gap-4 p-4">
+                  <div key={index} className="relative text-center">
+                    <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-background shadow-md ring-8 ring-card">
                       {step.icon}
-                      <h3 className="font-semibold text-primary">
-                        {step.title}
-                      </h3>
                     </div>
-                  </SpotlightCard>
+                    <h3 className="mt-6 font-headline text-xl font-semibold text-primary">{step.title}</h3>
+                    <p className="mt-2 text-muted-foreground">{step.description}</p>
+                  </div>
                 ))}
               </div>
             </div>
