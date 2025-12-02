@@ -101,7 +101,7 @@ export default function Home() {
               >
                 Designing spaces that reflect you.
               </h1>
-              <p className="mx-auto max-w-5xl text-center text-lg text-muted-foreground">
+              <p className="mx-auto max-w-5xl text-lg text-muted-foreground">
                 Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row max-w-5xl mx-auto">
