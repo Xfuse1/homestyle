@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -68,9 +68,14 @@ export default function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
+                <span className="sr-only">Open Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[80vw] bg-background">
+              <SheetTitle className="sr-only">Main Menu</SheetTitle>
+              <SheetDescription className="sr-only">
+                Main navigation links for the website.
+              </SheetDescription>
               <nav className="mt-8 flex flex-col items-center gap-4">
                 <NavLinkItems isMobile />
                 <SheetClose asChild>
