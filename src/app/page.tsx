@@ -118,7 +118,7 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="bg-card py-20 md:py-32">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto">
+            <div className="mx-auto max-w-3xl text-center">
               <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
                 A Trustworthy Partner for Your Dream Space
               </h2>
@@ -130,17 +130,25 @@ export default function Home() {
                 our clients.
               </p>
             </div>
-            
-            <div className="relative mt-20">
-              <div className="relative grid grid-cols-1 gap-10 md:grid-cols-4">
+            <div className="mt-16">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {processSteps.map((step, index) => (
-                  <div key={index} className="relative text-center">
-                    <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-background shadow-md">
-                      {step.icon}
+                  <SpotlightCard
+                    key={index}
+                    className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2"
+                  >
+                    <div className="p-8">
+                      <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
+                        {step.icon}
+                      </div>
+                      <h3 className="mt-6 font-headline text-xl font-semibold text-primary">
+                        {step.title}
+                      </h3>
+                      <p className="mt-2 text-muted-foreground">
+                        {step.description}
+                      </p>
                     </div>
-                    <h3 className="mt-6 font-headline text-xl font-semibold text-primary">{step.title}</h3>
-                    <p className="mt-2 text-muted-foreground">{step.description}</p>
-                  </div>
+                  </SpotlightCard>
                 ))}
               </div>
             </div>
