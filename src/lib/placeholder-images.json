@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A modern living room interior",
+      "imageUrl": "https://i.postimg.cc/fWXsNW1V/555.jpg",
+      "imageHint": "modern living room"
+    },
+    {
+      "id": "hero-2",
+      "description": "An isolated modern armchair",
+      "imageUrl": "https://i.postimg.cc/hPBBPWqz/isolated-modern-armchair.png",
+      "imageHint": "modern armchair"
+    },
+    {
+      "id": "hero-3",
+      "description": "An isolated modern sofa",
+      "imageUrl": "https://i.postimg.cc/yYHHY4zZ/isolated-modern-sofa.png",
+      "imageHint": "modern sofa"
+    },
+    {
+      "id": "project-1",
+      "description": "Minimalist Apartment Living Room",
+      "imageUrl": "https://images.unsplash.com/photo-1501876725168-00c445821c9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwYXBhcnRtZW50fGVufDB8fHx8MTc2NDY3NjQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist apartment"
+    },
+    {
+      "id": "project-2",
+      "description": "Luxury Villa Master Bedroom",
+      "imageUrl": "https://images.unsplash.com/photo-1617098900591-3f90928e8c54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsdXh1cnklMjBiZWRyb29tfGVufDB8fHx8MTc2NDYwNzE1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury bedroom"
+    },
+    {
+      "id": "project-3",
+      "description": "Modern Office Reception Area",
+      "imageUrl": "https://images.unsplash.com/photo-1578991624414-276ef23a534f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvZmZpY2UlMjByZWNlcHRpb258ZW58MHx8fHwxNzY0Njc2NDUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office reception"
+    },
+    {
+      "id": "project-4",
+      "description": "Retail Boutique Interior",
+      "imageUrl": "https://images.unsplash.com/photo-1748963222347-44e59038445c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyZXRhaWwlMjBib3V0aXF1ZXxlbnwwfHx8fDE3NjQ2NzY0NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "retail boutique"
+    },
+    {
+      "id": "project-5",
+      "description": "Cozy Kitchen and Dining",
+      "imageUrl": "https://images.unsplash.com/photo-1725905803121-dd123b058a5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3p5JTIwa2l0Y2hlbnxlbnwwfHx8fDE3NjQ2MzE1Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cozy kitchen"
+    },
+    {
+      "id": "project-6",
+      "description": "Elegant Bathroom Design",
+      "imageUrl": "https://images.unsplash.com/photo-1687951812646-efa29195a80d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxlbGVnYW50JTIwYmF0aHJvb218ZW58MHx8fHwxNzY0NjY3NTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "elegant bathroom"
+    },
+    {
+      "id": "project-before-1",
+      "description": "Living room before renovation",
+      "imageUrl": "https://images.unsplash.com/photo-1630699144919-681cf308ae82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHJvb218ZW58MHx8fHwxNzY0NjAwMTIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "empty room"
+    },
+    {
+      "id": "project-after-1",
+      "description": "Living room after renovation",
+      "imageUrl": "https://images.unsplash.com/photo-1628744876497-eb30460be9f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2Rlcm4lMjBsaXZpbmclMjByb29tfGVufDB8fHx8MTc2NDY2Njg1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern living room"
+    }
+  ]
 }
