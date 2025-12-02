@@ -101,7 +101,7 @@ export default function Home() {
               >
                 Designing spaces that reflect you.
               </h1>
-              <p className="mx-auto max-w-5xl text-lg text-muted-foreground text-center md:text-left">
+              <p className="mt-4 max-w-5xl mx-auto text-lg text-muted-foreground leading-relaxed text-center md:text-left">
                 Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row max-w-5xl mx-auto">
@@ -111,23 +111,34 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 md:py-32">
+        <section id="about" className="bg-card py-20 md:py-32">
           <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="space-y-4">
+              <div className="space-y-4 text-center lg:text-left">
                 <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
                   A Trustworthy Partner for Your Dream Space
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Home Stylist is a premier interior design and full finishing studio based in Sohag. We specialize in transforming spaces from concept to reality, handling every detail with precision and care. Our services cover everything from initial 2D/3D designs and engineering supervision to complete turnkey delivery, ensuring a seamless and stress-free experience for our clients.
+                  Home Stylist is a premier interior design and full finishing
+                  studio based in Sohag. We specialize in transforming spaces
+                  from concept to reality, handling every detail with precision
+                  and care. Our services cover everything from initial 2D/3D
+                  designs and engineering supervision to complete turnkey
+                  delivery, ensuring a seamless and stress-free experience for
+                  our clients.
                 </p>
               </div>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-4">
                 {processSteps.map((step, index) => (
-                  <div key={index} className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm dark:bg-card">
+                  <Card
+                    key={index}
+                    className="flex items-center gap-4 p-4"
+                  >
                     {step.icon}
-                    <h3 className="font-semibold text-primary">{step.title}</h3>
-                  </div>
+                    <h3 className="font-semibold text-primary">
+                      {step.title}
+                    </h3>
+                  </Card>
                 ))}
               </div>
             </div>
