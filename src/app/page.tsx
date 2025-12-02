@@ -96,8 +96,8 @@ export default function Home() {
           </div>
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-start px-4 pt-16">
             <div className="grid max-w-2xl gap-6">
-              <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl">
-                We design a space that reflects you… and deliver it turnkey.
+              <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl" dir="rtl">
+                نصمم مساحة تعكسك... ونسلمها جاهزة.
               </h1>
               <p className="max-w-xl text-lg text-muted-foreground">
                 Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
@@ -262,5 +262,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
