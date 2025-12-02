@@ -99,15 +99,12 @@ export default function Home() {
               <h1
                 className="font-headline text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl lg:leading-snug"
               >
-                We design a space that reflects you… and deliver it turnkey.
+                Designing spaces that reflect you.
               </h1>
               <p className="mx-auto max-w-5xl text-lg text-muted-foreground">
                 Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row max-w-5xl mx-auto">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link href="#contact">Book a Free Consultation</Link>
-                </Button>
               </div>
             </div>
           </div>
