@@ -278,16 +278,6 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-            <div className="mt-16 text-center">
-              <h3 data-aos="fade-up" className="mb-4 font-headline text-2xl font-bold text-primary">
-                Want your space to be our next transformation?
-              </h3>
-              <div data-aos="fade-up" data-aos-delay="150">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link href="#contact">Start Your Project</Link>
-                </Button>
-              </div>
-            </div>
           </div>
         </section>
         
