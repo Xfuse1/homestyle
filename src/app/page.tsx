@@ -49,9 +49,12 @@ export default function Home() {
 
             anime({
               targets: ".sofa-hero",
-              opacity: [0, 1],
+              opacity: [0.5, 1],
               translateX: ["16rem", "0rem"],
-              rotate: ["-15deg", "0deg"],
+              rotate: {
+                value: "-.75turn",
+                easing: "inOutQuad",
+              },
               duration: 2000,
               easing: "easeOutQuad",
               loop: false,
