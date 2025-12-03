@@ -32,10 +32,10 @@ import ContactForm from "@/components/contact-form";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import SpotlightCard from "@/components/spotlight-card";
 import { cn } from "@/lib/utils";
+import anime from "animejs";
 
 export default function Home() {
   const hasAnimatedRef = useRef(false);
-  const [heroVisible, setHeroVisible] = useState(false);
 
   useEffect(() => {
     const el = document.querySelector(".sofa-hero");
@@ -46,7 +46,17 @@ export default function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimatedRef.current) {
             hasAnimatedRef.current = true;
-            setHeroVisible(true);
+
+            anime({
+              targets: ".sofa-hero",
+              opacity: [0, 1],
+              translateX: ["16rem", "0rem"],
+              rotate: ["-15deg", "0deg"],
+              duration: 2000,
+              easing: "easeOutQuad",
+              loop: false,
+            });
+
             observer.unobserve(entry.target);
             observer.disconnect();
           }
@@ -197,12 +207,7 @@ export default function Home() {
                 alt="Elegant floor lamp"
                 width={800}
                 height={1200}
-                className={cn(
-                  "sofa-hero rounded-lg max-w-md w-full transition-all duration-1000 ease-out transform",
-                  heroVisible
-                    ? "opacity-100 translate-x-0 rotate-0"
-                    : "opacity-0 translate-x-16 -rotate-6"
-                )}
+                className="sofa-hero opacity-0 rounded-lg max-w-md w-full"
                 data-ai-hint="floor lamp"
               />
             </div>
