@@ -135,7 +135,7 @@ export default function Home() {
         <section id="home" className="relative h-[90vh] min-h-[600px] w-full overflow-hidden lg:h-screen">
           <div className="absolute inset-0 z-0 h-full w-full">
             <iframe
-              src="https://streamable.com/e/x7zmzb?autoplay=1&muted=1&loop=1&controls=0&logo=0"
+              src="https://streamable.com/e/x7zmzb?autoplay=1&muted=1&loop=1&controls=0&logo=0&background=1"
               frameBorder="0"
               allowFullScreen
               allow="autoplay; loop"
