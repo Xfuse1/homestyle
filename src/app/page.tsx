@@ -328,7 +328,7 @@ export default function Home() {
       <footer className="bg-primary py-8 text-primary-foreground">
         <div className="container mx-auto flex flex-col items-center gap-4 px-4 text-center">
           <div className="flex justify-center gap-6">
-            <Link href="#" aria-label="Instagram" className="transition-opacity hover:opacity-80">
+            <Link href="https://www.instagram.com/homestylist6/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition-opacity hover:opacity-80">
               <Instagram className="h-6 w-6" />
             </Link>
             <Link href="#" aria-label="Facebook" className="transition-opacity hover:opacity-80">
