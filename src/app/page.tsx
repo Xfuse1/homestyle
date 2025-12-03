@@ -32,7 +32,7 @@ import ContactForm from "@/components/contact-form";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import SpotlightCard from "@/components/spotlight-card";
 import { cn } from "@/lib/utils";
-import anime from "animejs";
+import anime from "animejs/lib/anime.es.js";
 
 export default function Home() {
   const hasAnimatedRef = useRef(false);
@@ -40,38 +40,35 @@ export default function Home() {
   useEffect(() => {
     const el = document.querySelector(".sofa-hero");
     if (!el) return;
-
+  
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimatedRef.current) {
             hasAnimatedRef.current = true;
-
+  
             anime({
               targets: ".sofa-hero",
               opacity: [0.5, 1],
               translateX: ["16rem", "0rem"],
-              rotate: {
-                value: "-.75turn",
-                easing: "inOutQuad",
-              },
+              rotate: ["-.75turn", "0turn"],
               duration: 2000,
-              easing: "easeOutQuad",
+              easing: "easeInOutQuad",
               loop: false,
             });
-
+  
             observer.unobserve(entry.target);
             observer.disconnect();
           }
         });
       },
       {
-        threshold: 0.4, // Starts when 40% of the element is visible
+        threshold: 0.4,
       }
     );
-
+  
     observer.observe(el);
-
+  
     return () => observer.disconnect();
   }, []);
 
@@ -206,11 +203,11 @@ export default function Home() {
             </div>
             <div className="lg:order-1 flex items-center justify-center" data-aos="fade-right">
               <Image
-                src="https://i.postimg.cc/W4qfB7bS/abajwrh-faynal-bdwn-khlfyh.png"
+                src="https://i.postimg.cc/W4qfB7bS/اباجوره_فاينال_بدون_خلفيه.png"
                 alt="Elegant floor lamp"
                 width={800}
                 height={1200}
-                className="sofa-hero opacity-0 rounded-lg max-w-md w-full"
+                className="sofa-hero rounded-lg max-w-md w-full"
                 data-ai-hint="floor lamp"
               />
             </div>
