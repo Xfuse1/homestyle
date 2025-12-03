@@ -145,11 +145,14 @@ export default function Home() {
             {/* Right Column (Video) */}
             <div className="mt-12 w-full md:mt-0 md:w-3/5 flex justify-center md:justify-end" data-aos="fade-left">
               <div className="relative w-full max-w-3xl aspect-[4/3] md:aspect-video rounded-3xl bg-[#f6f3ea] overflow-hidden">
-                <iframe
-                    src="https://streamable.com/e/x7zmzb?autoplay=1&muted=1&loop=1&controls=0&logo=0&background=1"
-                    allow="autoplay"
-                    className="absolute top-0 left-0 w-full h-full border-0"
-                  ></iframe>
+                <video
+                  src="https://bbzjxcjfmeoiojjnfvfa.supabase.co/storage/v1/object/sign/sara%20wep/vedio.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85MTllODRmNS02YWU3LTRjYTYtYWZiMS0yMDQyMjE1ZmY2ODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzYXJhIHdlcC92ZWRpby5tcDQiLCJpYXQiOjE3NjQ3NzMxODgsImV4cCI6MzE1NTM2NDc3MzE4OH0.4ynzLqxO98tuEoRX3pdkzEdui8458tVASwJQhta8Sk8"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute top-0 left-0 w-full h-full border-0 object-cover"
+                ></video>
               </div>
             </div>
           </div>
