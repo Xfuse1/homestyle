@@ -201,7 +201,7 @@ export default function Home() {
                 alt="Elegant floor lamp"
                 width={800}
                 height={1200}
-                className="sofa-hero rounded-lg shadow-lg max-w-md w-full"
+                className="sofa-hero rounded-lg max-w-md w-full"
                 data-ai-hint="floor lamp"
               />
             </div>
