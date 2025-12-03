@@ -124,34 +124,39 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="bg-card py-20 md:py-32">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto mb-16 max-w-3xl text-center">
-              <h2 data-aos="fade-up" className="font-headline text-3xl font-bold text-primary md:text-4xl">
-                A Trustworthy Partner for Your Dream Space
-              </h2>
-              <p data-aos="fade-up" data-aos-delay="150" className="mt-4 text-lg text-muted-foreground">
-                Home Stylist is a premier interior design and full finishing
-                studio based in Sohag. We specialize in transforming spaces
-                from concept to reality, handling every detail with precision
-                and care.
-              </p>
+          <div className="container mx-auto grid grid-cols-1 gap-12 px-4 lg:grid-cols-2 lg:items-start">
+            <div className="lg:order-2">
+              <div className="mb-12 text-right">
+                <h2 data-aos="fade-up" className="font-headline text-3xl font-bold text-primary md:text-4xl">
+                  A Trustworthy Partner for Your Dream Space
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="150" className="mt-4 text-lg text-muted-foreground">
+                  Home Stylist is a premier interior design and full finishing
+                  studio based in Sohag. We specialize in transforming spaces
+                  from concept to reality, handling every detail with precision
+                  and care.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                {processSteps.map((step, index) => (
+                  <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-right shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <CardContent className="p-8">
+                      <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner md:ml-auto md:mr-0">
+                        {step.icon}
+                      </div>
+                      <h3 className="font-headline text-xl font-semibold text-primary">
+                        {step.title}
+                      </h3>
+                      <p className="mt-2 text-muted-foreground">
+                        {step.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-              {processSteps.map((step, index) => (
-                <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
-                  <CardContent className="p-8">
-                    <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
-                      {step.icon}
-                    </div>
-                    <h3 className="font-headline text-xl font-semibold text-primary">
-                      {step.title}
-                    </h3>
-                    <p className="mt-2 text-muted-foreground">
-                      {step.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="lg:order-1 flex items-center justify-center">
+              {/* Image will go here */}
             </div>
           </div>
         </section>
