@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import anime from "animejs";
 import {
   Building,
@@ -32,17 +32,42 @@ import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import SpotlightCard from "@/components/spotlight-card";
 
 export default function Home() {
+  const hasAnimatedRef = useRef(false);
+
   useEffect(() => {
-    anime({
-      targets: ".sofa-hero",
-      translateX: ["0rem", 0, 17, 17, 0, 0],
-      translateY: ["0rem", -2.5, -2.5, 2.5, 2.5, 0],
-      scale: [1, 1, 0.5, 0.5, 1, 1],
-      rotate: { value: 360, duration: 3000, easing: "linear" },
-      duration: 3000,
-      easing: "easeInOutQuad",
-      loop: true,
-    });
+    const el = document.querySelector(".sofa-hero");
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimatedRef.current) {
+            hasAnimatedRef.current = true;
+
+            anime({
+              targets: ".sofa-hero",
+              translateX: ["0rem", 0, 17, 17, 0, 0],
+              translateY: ["0rem", -2.5, -2.5, 2.5, 2.5, 0],
+              scale: [1, 1, 0.5, 0.5, 1, 1],
+              rotate: { value: 360, easing: "linear" },
+              duration: 3000,
+              easing: "easeInOutSine",
+              loop: false, // Run the animation only once
+            });
+
+            observer.unobserve(entry.target);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        threshold: 0.4, // Starts when 40% of the element is visible
+      }
+    );
+
+    observer.observe(el);
+
+    return () => observer.disconnect();
   }, []);
 
   const projectImages = PlaceHolderImages.filter(
