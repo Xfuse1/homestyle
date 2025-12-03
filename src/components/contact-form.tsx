@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useEffect, useActionState } from "react";
+import { useActionState } from "react";
 
 import { submitContactForm } from "@/app/actions";
 import { Button } from "@/components/ui/button";
@@ -28,10 +28,7 @@ const contactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
-const initialState = {
-  message: "",
-  errors: {},
-};
+const WHATSAPP_NUMBER = "201029518786"; // Your WhatsApp number
 
 export default function ContactForm() {
   const form = useForm<ContactFormValues>({
@@ -44,22 +41,33 @@ export default function ContactForm() {
     },
   });
 
-  const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
 
-  useEffect(() => {
-    if (state?.message && Object.keys(state.errors).length === 0) {
-      toast({
-        title: "Success!",
-        description: state.message,
-      });
-      form.reset();
-    }
-  }, [state, toast, form]);
+  const handleWhatsAppSubmit = (values: ContactFormValues) => {
+    const text = `
+      New Consultation Request:
+      -------------------------
+      Full Name: ${values.fullName}
+      Phone: ${values.phone}
+      Location: ${values.location || 'Not provided'}
+      Message: ${values.message || 'Not provided'}
+    `;
+
+    const encodedText = encodeURIComponent(text.trim().replace(/\s+/g, ' '));
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+
+    window.open(whatsappUrl, "_blank");
+
+    toast({
+      title: "Redirecting to WhatsApp",
+      description: "Your message is ready to be sent.",
+    });
+    form.reset();
+  };
 
   return (
     <Form {...form}>
-      <form action={formAction} className="space-y-6">
+      <form onSubmit={form.handleSubmit(handleWhatsAppSubmit)} className="space-y-6">
         <div data-aos="fade-up" data-aos-delay="100">
           <FormField
             control={form.control}
@@ -122,7 +130,7 @@ export default function ContactForm() {
         </div>
         <div data-aos="fade-up" data-aos-delay="600">
           <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-            Submit Request
+            Submit Request via WhatsApp
           </Button>
         </div>
       </form>

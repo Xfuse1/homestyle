@@ -1,5 +1,5 @@
 "use server";
-
+// This file is no longer used for form submission but is kept for potential future use.
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -21,8 +21,6 @@ export async function submitContactForm(formData: FormData) {
     };
   }
 
-  // In a real application, you would send this data to your backend,
-  // save it to a database, or send an email.
   console.log("Form submitted successfully:", validatedFields.data);
 
   return {
