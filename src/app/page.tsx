@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import anime from "animejs";
 import {
   Building,
   CheckCircle,
@@ -32,27 +33,16 @@ import SpotlightCard from "@/components/spotlight-card";
 
 export default function Home() {
   useEffect(() => {
-    let cancelled = false;
-
-    import("https://esm.sh/animejs").then((anime) => {
-      if (cancelled) return;
-      
-      const animate = anime.default || anime;
-
-      animate(".sofa-hero", {
-        translateX: ["0rem", 0, 17, 17, 0, 0],
-        translateY: ["0rem", -2.5, -2.5, 2.5, 2.5, 0],
-        scale: [1, 1, 0.5, 0.5, 1, 1],
-        rotate: { value: 360, duration: 3000, ease: "linear" },
-        duration: 3000,
-        easing: "easeInOutQuad",
-        loop: true,
-      });
+    anime({
+      targets: ".sofa-hero",
+      translateX: ["0rem", 0, 17, 17, 0, 0],
+      translateY: ["0rem", -2.5, -2.5, 2.5, 2.5, 0],
+      scale: [1, 1, 0.5, 0.5, 1, 1],
+      rotate: { value: 360, duration: 3000, easing: "linear" },
+      duration: 3000,
+      easing: "easeInOutQuad",
+      loop: true,
     });
-
-    return () => {
-      cancelled = true;
-    };
   }, []);
 
   const projectImages = PlaceHolderImages.filter(
@@ -317,5 +307,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
