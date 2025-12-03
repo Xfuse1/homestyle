@@ -155,8 +155,15 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="lg:order-1 flex items-center justify-center">
-              {/* Image will go here */}
+            <div className="lg:order-1 flex items-center justify-center" data-aos="fade-right">
+              <Image
+                src="https://i.postimg.cc/QNRSrSDJ/tyst-llhrkh.jpg"
+                alt="Cozy and modern living room interior design"
+                width={800}
+                height={1200}
+                className="rounded-lg shadow-lg"
+                data-ai-hint="interior design"
+              />
             </div>
           </div>
         </section>
