@@ -32,11 +32,7 @@ export default function Home() {
   const projectImages = PlaceHolderImages.filter(
     (img) => img.id.startsWith("project-") && !img.id.includes("before") && !img.id.includes("after")
   );
-  const beforeAfterImages = {
-    before: PlaceHolderImages.find((img) => img.id === "project-before-1"),
-    after: PlaceHolderImages.find((img) => img.id === "project-after-1"),
-  };
-
+  
   const services = [
     {
       icon: (
@@ -199,15 +195,7 @@ export default function Home() {
                 Explore some of our transformations and see the quality we deliver.
               </p>
             </div>
-            {beforeAfterImages.before && beforeAfterImages.after && (
-               <div className="mb-16" data-aos="zoom-in">
-                  <h3 className="text-center font-headline text-2xl font-bold text-primary mb-8">Apartment Transformation</h3>
-                  <BeforeAfterSlider
-                    before={beforeAfterImages.before}
-                    after={beforeAfterImages.after}
-                  />
-               </div>
-            )}
+            
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {projectImages.map((project, index) => (
                 <Card key={project.id} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden">
