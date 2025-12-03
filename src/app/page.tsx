@@ -140,7 +140,7 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="bg-card py-20 md:py-32">
-          <div className="container mx-auto grid grid-cols-1 gap-12 px-4 lg:grid-cols-2 lg:items-start">
+          <div className="container mx-auto grid grid-cols-1 gap-12 px-4 lg:grid-cols-2 lg:items-center">
             <div className="lg:order-2">
               <div className="mb-12 text-right">
                 <h2 data-aos="fade-up" className="font-headline text-3xl font-bold text-primary md:text-4xl">
@@ -177,7 +177,7 @@ export default function Home() {
                 alt="Elegant floor lamp"
                 width={800}
                 height={1200}
-                className="sofa-hero rounded-lg shadow-lg"
+                className="sofa-hero rounded-lg shadow-lg max-w-md w-full"
                 data-ai-hint="floor lamp"
               />
             </div>
