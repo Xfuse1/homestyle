@@ -1,6 +1,8 @@
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import {
   Building,
   CheckCircle,
@@ -29,6 +31,30 @@ import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import SpotlightCard from "@/components/spotlight-card";
 
 export default function Home() {
+  useEffect(() => {
+    let cancelled = false;
+
+    import("https://esm.sh/animejs").then((anime) => {
+      if (cancelled) return;
+      
+      const animate = anime.default || anime;
+
+      animate(".sofa-hero", {
+        translateX: ["0rem", 0, 17, 17, 0, 0],
+        translateY: ["0rem", -2.5, -2.5, 2.5, 2.5, 0],
+        scale: [1, 1, 0.5, 0.5, 1, 1],
+        rotate: { value: 360, duration: 3000, ease: "linear" },
+        duration: 3000,
+        easing: "easeInOutQuad",
+        loop: true,
+      });
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const projectImages = PlaceHolderImages.filter(
     (img) => img.id.startsWith("project-") && !img.id.includes("before") && !img.id.includes("after")
   );
@@ -161,7 +187,7 @@ export default function Home() {
                 alt="Cozy and modern living room interior design"
                 width={800}
                 height={1200}
-                className="rounded-lg shadow-lg"
+                className="sofa-hero rounded-lg shadow-lg"
                 data-ai-hint="interior design"
               />
             </div>
