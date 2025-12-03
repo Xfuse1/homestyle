@@ -46,13 +46,12 @@ export default function Home() {
 
             anime({
               targets: ".sofa-hero",
-              translateX: ["0rem", 0, 17, 17, 0, 0],
-              translateY: ["0rem", -2.5, -2.5, 2.5, 2.5, 0],
-              scale: [1, 1, 0.5, 0.5, 1, 1],
-              rotate: { value: 360, easing: "linear" },
-              duration: 3000,
-              easing: "easeInOutSine",
-              loop: false, // Run the animation only once
+              opacity: [0.5, 1],
+              translateX: ['16rem', '0rem'],
+              rotate: ['-.25turn', '0turn'],
+              duration: 2000,
+              easing: 'easeOutQuad',
+              loop: false, 
             });
 
             observer.unobserve(entry.target);
