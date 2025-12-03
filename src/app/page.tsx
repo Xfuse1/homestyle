@@ -309,7 +309,7 @@ export default function Home() {
                   </div>
                   <div data-aos="fade-right" data-aos-delay="300" className="flex items-center gap-3">
                      <WhatsappIcon className="h-5 w-5 text-accent" />
-                     <a href="https://wa.me/201000000000" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                     <a href="https://wa.me/201029518786" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         Chat on WhatsApp
                      </a>
                   </div>
@@ -334,7 +334,7 @@ export default function Home() {
             <Link href="https://www.facebook.com/profile.php?id=61581922792330" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transition-opacity hover:opacity-80">
               <Facebook className="h-6 w-6" />
             </Link>
-            <Link href="https://wa.me/201000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="transition-opacity hover:opacity-80">
+            <Link href="https://wa.me/201029518786" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="transition-opacity hover:opacity-80">
               <WhatsappIcon className="h-6 w-6" />
             </Link>
           </div>
