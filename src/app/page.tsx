@@ -197,7 +197,7 @@ export default function Home() {
             </div>
             <div className="lg:order-1 flex items-center justify-center" data-aos="fade-right">
               <Image
-                src="https://i.postimg.cc/XJv4KdYY/abajwrh-tyst.png"
+                src="https://i.postimg.cc/W4qfB7bS/abajwrh-faynal-bdwn-khlfyh.png"
                 alt="Elegant floor lamp"
                 width={800}
                 height={1200}
