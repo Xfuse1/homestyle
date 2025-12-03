@@ -212,7 +212,7 @@ export default function Home() {
                     </div>
                     <div className="p-6">
                       <h3 className="font-headline text-lg font-bold text-primary">
-                        {project.id.replace('project-', 'Project ')}
+                        {project.title || project.id.replace('project-', 'Project ')}
                       </h3>
                       <p className="text-sm text-muted-foreground">{project.description}</p>
                     </div>
