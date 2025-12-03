@@ -10,13 +10,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
   Form,
   FormControl,
   FormField,
@@ -29,7 +22,6 @@ import { useToast } from "@/hooks/use-toast";
 const contactSchema = z.object({
   fullName: z.string().min(2, { message: "Full name must be at least 2 characters." }),
   phone: z.string().min(10, { message: "Please enter a valid phone number." }),
-  projectType: z.string({ required_error: "Please select a project type." }),
   location: z.string().optional(),
   message: z.string().optional(),
 });
@@ -47,7 +39,6 @@ export default function ContactForm() {
     defaultValues: {
       fullName: "",
       phone: "",
-      projectType: undefined,
       location: "",
       message: "",
     },
@@ -94,32 +85,6 @@ export default function ContactForm() {
                 <FormControl>
                   <Input placeholder="Your phone number" {...field} />
                 </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300">
-          <FormField
-            control={form.control}
-            name="projectType"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Project Type</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a project type" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="Apartment">Apartment</SelectItem>
-                    <SelectItem value="Villa">Villa</SelectItem>
-                    <SelectItem value="Office">Office</SelectItem>
-                    <SelectItem value="Shop">Shop</SelectItem>
-                    <SelectItem value="Other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
                 <FormMessage />
               </FormItem>
             )}
