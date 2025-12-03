@@ -18,6 +18,8 @@ import {
   Users,
   Wrench,
   Clock,
+  Instagram,
+  Facebook,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -323,8 +325,19 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-primary py-6 text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
+      <footer className="bg-primary py-8 text-primary-foreground">
+        <div className="container mx-auto flex flex-col items-center gap-4 px-4 text-center">
+          <div className="flex justify-center gap-6">
+            <Link href="#" aria-label="Instagram" className="transition-opacity hover:opacity-80">
+              <Instagram className="h-6 w-6" />
+            </Link>
+            <Link href="#" aria-label="Facebook" className="transition-opacity hover:opacity-80">
+              <Facebook className="h-6 w-6" />
+            </Link>
+            <Link href="https://wa.me/201000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="transition-opacity hover:opacity-80">
+              <WhatsappIcon className="h-6 w-6" />
+            </Link>
+          </div>
           <p>&copy; {new Date().getFullYear()} Home Stylist. All Rights Reserved.</p>
         </div>
       </footer>
