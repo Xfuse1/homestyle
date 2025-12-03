@@ -2,39 +2,39 @@
   "placeholderImages": [
     {
       "id": "project-1",
-      "description": "Minimalist Apartment Living Room",
+      "description": "A serene bathroom suite wrapped in soft grey marble, with a floating vanity, illuminated mirror, and walk-in shower. The freestanding tub, warm lighting, and built-in shelving create a spa-like experience for everyday living.",
       "imageUrl": "https://images.unsplash.com/photo-1501876725168-00c445821c9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwYXBhcnRtZW50fGVufDB8fHx8MTc2NDY3NjQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "minimalist apartment"
+      "imageHint": "marble bathroom"
     },
     {
       "id": "project-2",
-      "description": "Luxury Villa Master Bedroom",
+      "description": "A warm, modern bedroom that layers textiles, patterned rugs, and soft lighting to create a calm retreat. Natural wood flooring and carefully curated décor add character while keeping the space restful and inviting.",
       "imageUrl": "https://images.unsplash.com/photo-1617098900591-3f90928e8c54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsdXh1cnklMjBiZWRyb29tfGVufDB8fHx8MTc2NDYwNzE1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "luxury bedroom"
+      "imageHint": "contemporary bedroom"
     },
     {
       "id": "project-3",
-      "description": "Modern Office Reception Area",
+      "description": "This master bedroom blends rich wood panels, brass accents, and soft neutrals for a luxurious hotel-like feel. Integrated lighting, sculptural fixtures, and tailored furniture elevate the space with a timeless, elegant mood.",
       "imageUrl": "https://images.unsplash.com/photo-1578991624414-276ef23a534f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxvZmZpY2UlMjByZWNlcHRpb258ZW58MHx8fHwxNzY0Njc2NDUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "office reception"
+      "imageHint": "master bedroom"
     },
     {
       "id": "project-4",
-      "description": "Retail Boutique Interior",
+      "description": "A collection of kids’ bedrooms designed in soft blush tones, playful textures, and rounded forms. From twin beds to cozy reading corners and plush toys, every detail is crafted to feel safe, joyful, and beautifully organized.",
       "imageUrl": "https://images.unsplash.com/photo-1748963222347-44e59038445c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyZXRhaWwlMjBib3V0aXF1ZXxlbnwwfHx8fDE3NjQ2NzY0NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "retail boutique"
+      "imageHint": "kids bedroom"
     },
     {
       "id": "project-5",
-      "description": "Cozy Kitchen and Dining",
+      "description": "An airy dining and seating area that pairs clean lines with warm materials. Upholstered chairs, a sleek dining table, and curated décor pieces create a welcoming space for everyday meals and special gatherings.",
       "imageUrl": "https://images.unsplash.com/photo-1725905803121-dd123b058a5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3p5JTIwa2l0Y2hlbnxlbnwwfHx8fDE3NjQ2MzE1Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cozy kitchen"
+      "imageHint": "modern dining"
     },
     {
       "id": "project-6",
-      "description": "Elegant Bathroom Design",
+      "description": "Two contrasting kitchen designs: one in cool greys with sleek cabinetry and integrated lighting, and another in fresh mint green with a social island. Both are highly functional spaces that balance storage, style, and natural light.",
       "imageUrl": "https://images.unsplash.com/photo-1687951812646-efa29195a80d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxlbGVnYW50JTIwYmF0aHJvb218ZW58MHx8fHwxNzY0NjY3NTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "elegant bathroom"
+      "imageHint": "contemporary kitchen"
     },
     {
       "id": "project-before-1",

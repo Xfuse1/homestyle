@@ -136,20 +136,20 @@ export default function Home() {
                 and care.
               </p>
             </div>
-            <div className="relative grid grid-cols-1 gap-8 md:grid-cols-4">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
               {processSteps.map((step, index) => (
                 <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
-                    <CardContent className="p-8">
-                      <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
-                        {step.icon}
-                      </div>
-                      <h3 className="font-headline text-xl font-semibold text-primary">
-                        {step.title}
-                      </h3>
-                      <p className="mt-2 text-muted-foreground">
-                        {step.description}
-                      </p>
-                    </CardContent>
+                  <CardContent className="p-8">
+                    <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
+                      {step.icon}
+                    </div>
+                    <h3 className="font-headline text-xl font-semibold text-primary">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-muted-foreground">
+                      {step.description}
+                    </p>
+                  </CardContent>
                 </Card>
               ))}
             </div>
@@ -212,9 +212,9 @@ export default function Home() {
                     </div>
                     <div className="p-6">
                       <h3 className="font-headline text-lg font-bold text-primary">
-                        {project.description}
+                        {project.id.replace('project-', 'Project ')}
                       </h3>
-                      <p className="text-sm text-muted-foreground">Design & Execution</p>
+                      <p className="text-sm text-muted-foreground">{project.description}</p>
                     </div>
                   </CardContent>
                 </Card>
