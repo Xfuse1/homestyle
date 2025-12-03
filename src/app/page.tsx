@@ -134,14 +134,14 @@ export default function Home() {
         {/* Hero Section */}
         <section id="home" className="relative h-[90vh] min-h-[600px] w-full overflow-hidden lg:h-screen">
           <div className="absolute inset-0 z-0 h-full w-full">
-            <iframe
-              src="https://streamable.com/e/x7zmzb?autoplay=1&muted=1&loop=1&controls=0&logo=0&background=1"
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; loop"
+            <video
+              src="https://files.catbox.moe/2fx3pi.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="pointer-events-none absolute left-0 top-0 h-full w-full object-cover"
-              style={{ objectFit: 'cover' }}
-            ></iframe>
+            ></video>
           </div>
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-start px-4 pt-16">
             <div className="grid max-w-5xl gap-6">
