@@ -39,22 +39,30 @@ export default function Home() {
 
   const services = [
     {
-      icon: <LayoutGrid className="h-10 w-10 text-accent" />,
+      icon: (
+        <LayoutGrid className="h-10 w-10 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
+      ),
       title: "Interior Design",
       description: "2D & 3D visualization to bring your vision to life before execution.",
     },
     {
-      icon: <Construction className="h-10 w-10 text-accent" />,
+      icon: (
+        <Construction className="h-10 w-10 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
+      ),
       title: "Full Finishing & Contracting",
       description: "Complete execution from plumbing and electrical to painting and flooring.",
     },
     {
-      icon: <Users className="h-10 w-10 text-accent" />,
+      icon: (
+        <Users className="h-10 w-10 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
+      ),
       title: "Engineering Supervision",
       description: "Dedicated project management to ensure quality and timely delivery.",
     },
     {
-      icon: <ShoppingBag className="h-10 w-10 text-accent" />,
+      icon: (
+        <ShoppingBag className="h-10 w-10 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
+      ),
       title: "Furniture & Decor Styling",
       description: "Sourcing and styling furniture, lighting, and decor to complete your space.",
     },
@@ -121,7 +129,7 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="bg-card py-20 md:py-32">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="mx-auto mb-16 max-w-3xl text-center">
               <h2 data-aos="fade-up" className="font-headline text-3xl font-bold text-primary md:text-4xl">
                 A Trustworthy Partner for Your Dream Space
               </h2>
@@ -129,28 +137,25 @@ export default function Home() {
                 Home Stylist is a premier interior design and full finishing
                 studio based in Sohag. We specialize in transforming spaces
                 from concept to reality, handling every detail with precision
-                and care, ensuring a seamless and stress-free experience for
-                our clients.
+                and care.
               </p>
             </div>
-            <div className="mt-16">
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-                {processSteps.map((step, index) => (
-                  <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
+            <div className="relative grid grid-cols-1 gap-8 md:grid-cols-4">
+              {processSteps.map((step, index) => (
+                <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
                     <CardContent className="p-8">
-                      <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
+                      <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner">
                         {step.icon}
                       </div>
-                      <h3 className="mt-6 font-headline text-xl font-semibold text-primary">
+                      <h3 className="font-headline text-xl font-semibold text-primary">
                         {step.title}
                       </h3>
                       <p className="mt-2 text-muted-foreground">
                         {step.description}
                       </p>
                     </CardContent>
-                  </Card>
-                ))}
-              </div>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -164,7 +169,12 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((service, index) => (
-                <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="transform-gpu text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                <Card
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                  className="group transform-gpu text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+                >
                   <CardHeader>
                     {service.icon}
                   </CardHeader>
