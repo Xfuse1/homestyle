@@ -23,18 +23,21 @@
     },
     {
       "id": "project-4",
+      "title": "Soft Blush Kids’ Dream Rooms",
       "description": "A collection of kids’ bedrooms designed in soft blush tones, playful textures, and rounded forms. From twin beds to cozy reading corners and plush toys, every detail is crafted to feel safe, joyful, and beautifully organized.",
       "imageUrl": "https://images.unsplash.com/photo-1748963222347-44e59038445c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyZXRhaWwlMjBib3V0aXF1ZXxlbnwwfHx8fDE3NjQ2NzY0NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "kids bedroom"
     },
     {
       "id": "project-5",
+      "title": "Modern Dining & Lounge Experience",
       "description": "An airy dining and seating area that pairs clean lines with warm materials. Upholstered chairs, a sleek dining table, and curated décor pieces create a welcoming space for everyday meals and special gatherings.",
       "imageUrl": "https://images.unsplash.com/photo-1725905803121-dd123b058a5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3p5JTIwa2l0Y2hlbnxlbnwwfHx8fDE3NjQ2MzE1Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern dining"
     },
     {
       "id": "project-6",
+      "title": "Signature Contemporary Kitchens",
       "description": "Two contrasting kitchen designs: one in cool greys with sleek cabinetry and integrated lighting, and another in fresh mint green with a social island. Both are highly functional spaces that balance storage, style, and natural light.",
       "imageUrl": "https://images.unsplash.com/photo-1687951812646-efa29195a80d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxlbGVnYW50JTIwYmF0aHJvb218ZW58MHx8fHwxNzY0NjY3NTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "contemporary kitchen"
