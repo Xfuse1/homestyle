@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-import anime from "animejs";
+import { useEffect, useRef, useState } from "react";
 import {
   Building,
   CheckCircle,
@@ -32,9 +31,11 @@ import BeforeAfterSlider from "@/components/before-after-slider";
 import ContactForm from "@/components/contact-form";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import SpotlightCard from "@/components/spotlight-card";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   const hasAnimatedRef = useRef(false);
+  const [heroVisible, setHeroVisible] = useState(false);
 
   useEffect(() => {
     const el = document.querySelector(".sofa-hero");
@@ -45,17 +46,7 @@ export default function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimatedRef.current) {
             hasAnimatedRef.current = true;
-
-            anime({
-              targets: ".sofa-hero",
-              opacity: [0.5, 1],
-              translateX: ['16rem', '0rem'],
-              rotate: ['-.25turn', '0turn'],
-              duration: 2000,
-              easing: 'easeOutQuad',
-              loop: false, 
-            });
-
+            setHeroVisible(true);
             observer.unobserve(entry.target);
             observer.disconnect();
           }
@@ -134,22 +125,31 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section id="home" className="relative h-[90vh] min-h-[600px] w-full overflow-hidden lg:h-screen">
-          <div className="absolute inset-0 z-0 h-full w-full">
-            <video
-              src="https://files.catbox.moe/2fx3pi.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="pointer-events-none absolute left-0 top-0 h-full w-full object-cover"
-            ></video>
-          </div>
-          <div className="container relative z-10 mx-auto flex h-full flex-col justify-start px-4 pt-16">
-            <div className="grid max-w-5xl gap-6">
-              
-              
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row max-w-5xl mx-auto">
+        <section id="home" className="relative w-full overflow-hidden bg-background">
+          <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-20 md:flex-row md:py-28 md:gap-10">
+            {/* Left Column (Text) */}
+            <div className="w-full md:w-2/5 max-w-md space-y-6 text-center md:text-left">
+              <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl" data-aos="fade-right">
+                Designing spaces that reflect you.
+              </h1>
+              <p className="text-lg text-muted-foreground" data-aos="fade-right" data-aos-delay="100">
+                Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
+              </p>
+              <div data-aos="fade-right" data-aos-delay="200">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+                  <Link href="#projects">Explore Our Work</Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Column (Video) */}
+            <div className="mt-12 w-full md:mt-0 md:w-3/5 flex justify-center md:justify-end" data-aos="fade-left">
+              <div className="relative w-full max-w-3xl aspect-[4/3] md:aspect-video rounded-3xl bg-[#f6f3ea] overflow-hidden">
+                <iframe
+                    src="https://streamable.com/e/x7zmzb?autoplay=1&muted=1&loop=1&controls=0&logo=0&background=1"
+                    allow="autoplay"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                  ></iframe>
               </div>
             </div>
           </div>
@@ -194,7 +194,12 @@ export default function Home() {
                 alt="Elegant floor lamp"
                 width={800}
                 height={1200}
-                className="sofa-hero rounded-lg max-w-md w-full"
+                className={cn(
+                  "sofa-hero rounded-lg max-w-md w-full transition-all duration-1000 ease-out transform",
+                  heroVisible
+                    ? "opacity-100 translate-x-0 rotate-0"
+                    : "opacity-0 translate-x-16 -rotate-6"
+                )}
                 data-ai-hint="floor lamp"
               />
             </div>
