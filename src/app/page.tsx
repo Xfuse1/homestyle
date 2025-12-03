@@ -147,17 +147,8 @@ export default function Home() {
           </div>
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-start px-4 pt-16">
             <div className="grid max-w-5xl gap-6">
-              <h1
-                data-aos="fade-up"
-                className="font-headline text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl lg:leading-snug"
-              >
-                Designing spaces that reflect you.
-              </h1>
-              <p 
-                data-aos="fade-up" data-aos-delay="150"
-                className="mt-4 max-w-5xl text-lg text-muted-foreground leading-relaxed md:text-left">
-                Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
-              </p>
+              
+              
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row max-w-5xl mx-auto">
               </div>
             </div>
