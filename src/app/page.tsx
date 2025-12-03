@@ -331,7 +331,7 @@ export default function Home() {
             <Link href="https://www.instagram.com/homestylist6/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition-opacity hover:opacity-80">
               <Instagram className="h-6 w-6" />
             </Link>
-            <Link href="#" aria-label="Facebook" className="transition-opacity hover:opacity-80">
+            <Link href="https://www.facebook.com/profile.php?id=61581922792330" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transition-opacity hover:opacity-80">
               <Facebook className="h-6 w-6" />
             </Link>
             <Link href="https://wa.me/201000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="transition-opacity hover:opacity-80">
