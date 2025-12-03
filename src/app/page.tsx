@@ -161,7 +161,7 @@ export default function Home() {
                   muted
                   loop
                   playsInline
-                  className="absolute top-0 left-0 w-full h-full border-0 object-cover"
+                  className="absolute inset-0 z-0 h-full w-[130%] left-1/2 -translate-x-1/2 object-cover"
                 ></video>
               </div>
             </div>
