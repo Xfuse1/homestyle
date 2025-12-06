@@ -84,8 +84,8 @@ export const messages: Messages = {
   // Projects
   projects_title: { en: "Selected Interiors & Finishing Projects", ar: "مشاريع مختارة في التصميم والتشطيبات" },
   projects_subtitle: {
-    en: "Explore some of our transformations and see the quality we deliver.",
-    ar: "استكشف بعض تحولاتنا وشاهد الجودة التي نقدمها.",
+    en: "We let our work speak for our quality. Explore our latest projects.",
+    ar: "نترك أعمالنا تتحدث عن جودتنا. استكشف أحدث مشاريعنا.",
   },
   project_1_title: { en: "Marble Spa Bathroom", ar: "حمام رخامي فاخر" },
   project_1_desc: { en: "A serene grey-marble bathroom with a floating vanity, walk-in shower, and spa-inspired lighting for everyday relaxation.", ar: "حمام هادئ من الرخام الرمادي مع حوض عائم، دش واسع، وإضاءة مستوحاة من المنتجعات الصحية للاسترخاء اليومي." },
