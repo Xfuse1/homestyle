@@ -155,7 +155,7 @@ export default function Home() {
             </div>
 
             {/* Video Column */}
-            <div className="mt-12 flex w-full justify-center md:mt-0" data-aos="fade-left">
+            <div className="mt-12 flex w-full justify-center md:mt-0" data-aos="fade-left" dir="ltr">
               <div className="relative aspect-[4/3] w-full max-w-3xl overflow-hidden rounded-3xl bg-[#f6f3ea] md:aspect-video">
                 <video
                   src="https://bbzjxcjfmeoiojjnfvfa.supabase.co/storage/v1/object/sign/sara%20wep/vedio.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85MTllODRmNS02YWU3LTRjYTYtYWZiMS0yMDQyMjE1ZmY2ODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzYXJhIHdlcC92ZWRpby5tcDQiLCJpYXQiOjE3NjQ3NzMxODgsImV4cCI6MzE1NTM2NDc3MzE4OH0.4ynzLqxO98tuEoRX3pdkzEdui8458tVASwJQhta8Sk8"
