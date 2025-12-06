@@ -140,7 +140,7 @@ export default function Home() {
         <section id="home" className="relative w-full overflow-hidden bg-background">
           <div className="container mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2 md:py-28">
             {/* Text Column */}
-            <div className={cn("space-y-6 text-center md:text-left", lang === 'ar' ? 'md:order-2 md:text-right' : 'md:order-1')}>
+            <div className={cn("space-y-6 text-center md:text-left", lang === 'ar' ? 'md:order-2 md:text-right' : '')}>
               <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl" data-aos="fade-right">
                 {t("hero_title")}
               </h1>
@@ -155,7 +155,7 @@ export default function Home() {
             </div>
 
             {/* Video Column */}
-            <div className={cn("mt-12 flex w-full justify-center md:mt-0", lang === 'ar' ? 'md:order-1' : 'md:order-2')} data-aos="fade-left">
+            <div className={cn("mt-12 flex w-full justify-center md:mt-0", lang === 'ar' ? 'md:order-1' : '')} data-aos="fade-left">
               <div className="relative aspect-[4/3] w-full max-w-3xl overflow-hidden rounded-3xl bg-[#f6f3ea] md:aspect-video">
                 <video
                   src="https://bbzjxcjfmeoiojjnfvfa.supabase.co/storage/v1/object/sign/sara%20wep/vedio.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85MTllODRmNS02YWU3LTRjYTYtYWZiMS0yMDQyMjE1ZmY2ODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzYXJhIHdlcC92ZWRpby5tcDQiLCJpYXQiOjE3NjQ3NzMxODgsImV4cCI6MzE1NTM2NDc3MzE4OH0.4ynzLqxO98tuEoRX3pdkzEdui8458tVASwJQhta8Sk8"
@@ -173,7 +173,7 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="bg-card py-20 md:py-32">
           <div className="container mx-auto grid grid-cols-1 gap-12 px-4 lg:grid-cols-2 lg:items-center">
-            <div className="lg:order-2">
+            <div className={cn(lang === 'ar' ? 'lg:order-2' : '')}>
               <div className={cn("mb-12", lang === 'ar' ? 'text-right' : 'text-left')}>
                 <h2 data-aos="fade-up" className="font-headline text-3xl font-bold text-primary md:text-4xl">
                   {t("about_title")}
@@ -203,7 +203,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="lg:order-1 flex items-center justify-center" data-aos="fade-right">
+            <div className={cn("flex items-center justify-center", lang === 'ar' ? 'lg:order-1' : '')} data-aos="fade-right">
               <Image
                 src="https://i.postimg.cc/W4qfB7bS/اباجوره_فاينال_بدون_خلفيه.png"
                 alt="Elegant floor lamp"
