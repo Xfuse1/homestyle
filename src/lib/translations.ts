@@ -13,7 +13,7 @@ export const messages: Messages = {
 
   // Hero
   hero_title: {
-    en: "Designing spaces that reflect you.",
+    en: "Designs that mimic the reality of your dreams",
     ar: "تصاميم تحاكي واقع أحلامك",
   },
   hero_subtitle: {
@@ -24,7 +24,7 @@ export const messages: Messages = {
 
   // About
   about_title: {
-    en: "A Trustworthy Partner for Your Dream Space",
+    en: "Your trusted partner to design your dream space",
     ar: "شريكك الموثوق لتصميم مساحة أحلامك",
   },
   about_subtitle: {
@@ -35,17 +35,17 @@ export const messages: Messages = {
   // Process Steps
   step_consultation_title: { en: "Consultation", ar: "الاستشارة" },
   step_consultation_desc: {
-    en: "We start with a free consultation to understand your needs and vision.",
+    en: "We start with a free consultation to fully understand your needs and vision.",
     ar: "نبدأ باستشارة مجانية لفهم احتياجاتك ورؤيتك بشكل كامل.",
   },
   step_design_title: { en: "Design", ar: "التصميم" },
   step_design_desc: {
-    en: "Our team creates detailed 2D/3D designs for your approval.",
+    en: "Our team creates detailed 2D and 3D designs for your review and approval.",
     ar: "يقوم فريقنا بإنشاء تصميمات تفصيلية ثنائية وثلاثية الأبعاد لمراجعتك والموافقة عليها.",
   },
   step_execution_title: { en: "Execution", ar: "التنفيذ" },
   step_execution_desc: {
-    en: "We manage all finishing work with precision and high-quality materials.",
+    en: "We manage all finishing works with high precision and the finest materials.",
     ar: "ندير جميع أعمال التشطيبات بدقة عالية وباستخدام أجود الخامات.",
   },
   step_handover_title: { en: "Handover", ar: "التسليم" },
@@ -62,17 +62,17 @@ export const messages: Messages = {
   },
   service_design_title: { en: "Interior Design", ar: "تصميم داخلي" },
   service_design_desc: {
-    en: "2D & 3D visualization to bring your vision to life before execution.",
+    en: "2D & 3D visualization to bring your vision to life before execution begins.",
     ar: "تصور ثنائي وثلاثي الأبعاد لتجسيد رؤيتك قبل بدء التنفيذ.",
   },
   service_finishing_title: { en: "Full Finishing & Contracting", ar: "تشطيبات ومقاولات متكاملة" },
   service_finishing_desc: {
-    en: "Complete execution from plumbing and electrical to painting and flooring.",
+    en: "Complete execution of plumbing, electrical, painting, and flooring works.",
     ar: "تنفيذ كامل لأعمال السباكة والكهرباء والدهانات والأرضيات.",
   },
   service_supervision_title: { en: "Engineering Supervision", ar: "إشراف هندسي" },
   service_supervision_desc: {
-    en: "Dedicated project management to ensure quality and timely delivery.",
+    en: "Specialized project management to ensure quality and on-time delivery.",
     ar: "إدارة متخصصة للمشروع لضمان الجودة والتسليم في الوقت المحدد.",
   },
   service_furniture_title: { en: "Furniture & Decor Styling", ar: "تأثيث وتنسيق الديكور" },
@@ -87,10 +87,10 @@ export const messages: Messages = {
     en: "We let our work speak for our quality. Explore our latest projects.",
     ar: "نترك أعمالنا تتحدث عن جودتنا. استكشف أحدث مشاريعنا.",
   },
-  project_1_title: { en: "Marble Spa Bathroom", ar: "حمام رخامي فاخر" },
+  project_1_title: { en: "Luxury Marble Bathroom", ar: "حمام رخامي فاخر" },
   project_1_desc: { en: "A serene grey-marble bathroom with a floating vanity, walk-in shower, and spa-inspired lighting for everyday relaxation.", ar: "حمام هادئ من الرخام الرمادي مع حوض عائم، دش واسع، وإضاءة مستوحاة من المنتجعات الصحية للاسترخاء اليومي." },
   project_2_title: { en: "Cozy Modern Bedroom", ar: "غرفة نوم عصرية" },
-  project_2_desc: { en: "A warm, contemporary bedroom that layers soft textiles, a patterned rug, and ambient lighting to create a calm, restful retreat.", ar: "غرفة نوم معاصرة تجمع بين المنسوجات الناعمة، سجادة منقوشة، وإضاءة محيطة لخلق ملاذ هادئ ومريح." },
+  project_2_desc: { en: "A contemporary bedroom that combines soft textiles, a patterned rug, and ambient lighting to create a calm and restful retreat.", ar: "غرفة نوم معاصرة تجمع بين المنسوجات الناعمة، سجادة منقوشة، وإضاءة محيطة لخلق ملاذ هادئ ومريح." },
   project_3_title: { en: "Elegant Social Lounge", ar: "صالة جلوس أنيقة" },
   project_3_desc: { en: "A bright, open living space with clean lines, comfortable seating, and refined finishes designed for relaxed gatherings.", ar: "مساحة معيشة مشرقة ومفتوحة تتميز بخطوط نظيفة، مقاعد مريحة، وتشطيبات راقية مصممة للتجمعات المريحة." },
   project_4_title: { en: "Soft Blush Kids’ Room", ar: "غرف أطفال بألوان وردية" },
