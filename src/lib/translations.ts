@@ -25,7 +25,7 @@ export const messages: Messages = {
   // About
   about_title: {
     en: "A Trustworthy Partner for Your Dream Space",
-    ar: "شريك موثوق لمساحتك الحلم",
+    ar: "شريكك الموثوق لتصميم مساحة أحلامك",
   },
   about_subtitle: {
     en: "Home Stylist is a premier interior design and full finishing studio based in Sohag. We specialize in transforming spaces from concept to reality, handling every detail with precision and care.",
