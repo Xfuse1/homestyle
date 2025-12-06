@@ -237,7 +237,7 @@ export default function Home() {
         {/* Projects Section */}
         <section id="projects" className="py-20 md:py-32">
           <div className="container mx-auto px-4">
-            <div className="text-center">
+            <div className={cn("text-center", lang === 'ar' ? 'text-right' : '')}>
               <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">
                 {t('projects_title')}
               </h2>
@@ -260,11 +260,11 @@ export default function Home() {
                         className="h-full w-full object-cover"
                       />
                     </div>
-                    <div className="p-6">
+                    <div className={cn("p-6", lang === 'ar' ? 'text-right' : '')}>
                       <h3 className="font-headline text-lg font-bold text-primary">
-                        {project.title || project.id.replace('project-', 'Project ')}
+                        {t(`${project.id.replace(/-/g, '_')}_title`)}
                       </h3>
-                      <p className="text-sm text-muted-foreground">{project.description}</p>
+                      <p className="text-sm text-muted-foreground">{t(`${project.id.replace(/-/g, '_')}_desc`)}</p>
                     </div>
                   </CardContent>
                 </Card>

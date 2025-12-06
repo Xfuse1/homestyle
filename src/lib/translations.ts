@@ -87,6 +87,18 @@ export const messages: Messages = {
     en: "Explore some of our transformations and see the quality we deliver.",
     ar: "استكشف بعض تحولاتنا وشاهد الجودة التي نقدمها.",
   },
+  project_1_title: { en: "Marble Spa Bathroom", ar: "حمام رخامي فاخر" },
+  project_1_desc: { en: "A serene grey-marble bathroom with a floating vanity, walk-in shower, and spa-inspired lighting for everyday relaxation.", ar: "حمام هادئ من الرخام الرمادي مع حوض عائم، دش واسع، وإضاءة مستوحاة من المنتجعات الصحية للاسترخاء اليومي." },
+  project_2_title: { en: "Cozy Modern Bedroom", ar: "غرفة نوم عصرية دافئة" },
+  project_2_desc: { en: "A warm, contemporary bedroom that layers soft textiles, a patterned rug, and ambient lighting to create a calm, restful retreat.", ar: "غرفة نوم معاصرة ودافئة تجمع بين المنسوجات الناعمة، سجادة منقوشة، وإضاءة محيطة لخلق ملاذ هادئ ومريح." },
+  project_3_title: { en: "Elegant Social Lounge", ar: "صالة جلوس أنيقة" },
+  project_3_desc: { en: "A bright, open living space with clean lines, comfortable seating, and refined finishes designed for relaxed gatherings.", ar: "مساحة معيشة مشرقة ومفتوحة تتميز بخطوط نظيفة، مقاعد مريحة، وتشطيبات راقية مصممة للتجمعات المريحة." },
+  project_4_title: { en: "Soft Blush Kids’ Dream Rooms", ar: "غرف أطفال حالمة بألوان وردية" },
+  project_4_desc: { en: "A playful kids' room in soft blush tones with joyful textures and cozy corners, designed for safety and organization.", ar: "غرفة أطفال مبهجة بدرجات اللون الوردي الناعم مع خامات مرحة وأركان دافئة، مصممة للأمان والتنظيم." },
+  project_5_title: { en: "Modern Dining & Lounge Experience", ar: "تجربة طعام وجلوس عصرية" },
+  project_5_desc: { en: "An airy, modern dining space combining clean lines and warm materials for everyday meals and special gatherings.", ar: "مساحة طعام عصرية وجيدة التهوية تجمع بين الخطوط النظيفة والمواد الدافئة للوجبات اليومية والمناسبات الخاصة." },
+  project_6_title: { en: "Signature Contemporary Kitchens", ar: "مطابخ عصرية مميزة" },
+  project_6_desc: { en: "Two contrasting kitchens—one cool grey, one mint green—balancing sleek style, smart storage, and natural light.", ar: "مطبخان متباينان - أحدهما رمادي هادئ والآخر أخضر نعناعي - يوازنان بين الأناقة العصرية، التخزين الذكي، والإضاءة الطبيعية." },
 
   // Contact
   contact_title: { en: "Book Your Free Consultation", ar: "احجز استشارتك المجانية" },
