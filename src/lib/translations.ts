@@ -93,7 +93,7 @@ export const messages: Messages = {
   project_2_desc: { en: "A warm, contemporary bedroom that layers soft textiles, a patterned rug, and ambient lighting to create a calm, restful retreat.", ar: "غرفة نوم معاصرة تجمع بين المنسوجات الناعمة، سجادة منقوشة، وإضاءة محيطة لخلق ملاذ هادئ ومريح." },
   project_3_title: { en: "Elegant Social Lounge", ar: "صالة جلوس أنيقة" },
   project_3_desc: { en: "A bright, open living space with clean lines, comfortable seating, and refined finishes designed for relaxed gatherings.", ar: "مساحة معيشة مشرقة ومفتوحة تتميز بخطوط نظيفة، مقاعد مريحة، وتشطيبات راقية مصممة للتجمعات المريحة." },
-  project_4_title: { en: "Soft Blush Kids’ Dream Rooms", ar: "غرف أطفال حالمة بألوان وردية" },
+  project_4_title: { en: "Soft Blush Kids’ Dream Rooms", ar: "غرف أطفال بألوان وردية" },
   project_4_desc: { en: "A playful kids' room in soft blush tones with joyful textures and cozy corners, designed for safety and organization.", ar: "غرفة أطفال مبهجة بدرجات اللون الوردي الناعم مع خامات مرحة وأركان دافئة، مصممة للأمان والتنظيم." },
   project_5_title: { en: "Modern Dining & Lounge Experience", ar: "تجربة طعام وجلوس عصرية" },
   project_5_desc: { en: "An airy, modern dining space combining clean lines and warm materials for everyday meals and special gatherings.", ar: "مساحة طعام عصرية وجيدة التهوية تجمع بين الخطوط النظيفة والمواد الدافئة للوجبات اليومية والمناسبات الخاصة." },
