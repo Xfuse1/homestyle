@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetDescription } from "@/components/ui/sheet";
@@ -54,8 +55,17 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="#home" className="font-headline text-2xl font-bold text-primary">
-          Home Stylist
+        <Link href="#home" className="flex items-center gap-2 text-primary">
+          <Image 
+            src="https://i.postimg.cc/NMhMJ1FN/Home-Stylist-01.png"
+            alt="Home Stylist Logo"
+            width={50}
+            height={50}
+            className="h-12 w-auto"
+          />
+          <span className="font-headline text-2xl font-bold">
+            Home Stylist
+          </span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           <NavLinkItems />
