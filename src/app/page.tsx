@@ -237,11 +237,11 @@ export default function Home() {
         {/* Projects Section */}
         <section id="projects" className="py-20 md:py-32">
           <div className="container mx-auto px-4">
-            <div className={cn("text-center", lang === 'ar' ? 'text-right' : 'text-left')}>
+            <div className="text-center">
               <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">
                 {t('projects_title')}
               </h2>
-              <p data-aos="fade-up" data-aos-delay="150" className={cn("mb-12 max-w-2xl text-lg text-muted-foreground", lang === 'ar' ? '' : 'mx-auto')}>
+              <p data-aos="fade-up" data-aos-delay="150" className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
                 {t('projects_subtitle')}
               </p>
             </div>
