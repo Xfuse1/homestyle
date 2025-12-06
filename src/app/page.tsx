@@ -219,7 +219,7 @@ export default function Home() {
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
-                  className="group transform-gpu text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+                  className={cn("group transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-lg", lang === 'ar' ? 'text-right' : 'text-left')}
                 >
                   <CardHeader>
                     {service.icon}
@@ -237,7 +237,7 @@ export default function Home() {
         {/* Projects Section */}
         <section id="projects" className="py-20 md:py-32">
           <div className="container mx-auto px-4">
-            <div className={cn("text-center", lang === 'ar' ? 'text-right' : '')}>
+            <div className={cn("text-center", lang === 'ar' ? 'text-right' : 'text-left')}>
               <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">
                 {t('projects_title')}
               </h2>
@@ -260,7 +260,7 @@ export default function Home() {
                         className="h-full w-full object-cover"
                       />
                     </div>
-                    <div className={cn("p-6", lang === 'ar' ? 'text-right' : '')}>
+                    <div className={cn("p-6", lang === 'ar' ? 'text-right' : 'text-left')}>
                       <h3 className="font-headline text-lg font-bold text-primary">
                         {t(`${project.id.replace(/-/g, '_')}_title`)}
                       </h3>
@@ -276,7 +276,7 @@ export default function Home() {
         {/* Contact Section */}
         <section id="contact" className="bg-white py-20 dark:bg-black/10 md:py-32">
           <div className="container mx-auto px-4">
-            <div className={cn("grid gap-12 lg:grid-cols-2", lang === 'ar' ? 'text-right' : 'text-left')}>
+            <div className={cn("grid gap-12 lg:grid-cols-2", lang === 'ar' ? 'lg:text-right' : 'lg:text-left')}>
               <div className={cn("space-y-4", lang === 'ar' ? 'lg:order-2' : '')}>
                 <h2 data-aos="fade-right" className="font-headline text-3xl font-bold text-primary md:text-4xl">
                   {t('contact_title')}
@@ -285,15 +285,15 @@ export default function Home() {
                   {t('contact_subtitle')}
                 </p>
                 <div className="space-y-4 pt-4">
-                  <div data-aos="fade-right" data-aos-delay="200" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-end' : '')}>
+                  <div data-aos="fade-right" data-aos-delay="200" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end' : '')}>
                     <span>{t('working_hours')}</span>
                     <Clock className="h-5 w-5 text-accent" />
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="250" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-end' : '')}>
+                  <div data-aos="fade-right" data-aos-delay="250" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end' : '')}>
                     <span>{t('location')}</span>
                     <MapPin className="h-5 w-5 text-accent" />
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="300" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-end' : '')}>
+                  <div data-aos="fade-right" data-aos-delay="300" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end' : '')}>
                      <a href="https://wa.me/201029518786" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         {t('chat_whatsapp')}
                      </a>
