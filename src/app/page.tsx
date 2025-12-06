@@ -179,7 +179,7 @@ export default function Home() {
                 {processSteps.map((step, index) => (
                   <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className={cn("overflow-hidden rounded-lg bg-background shadow-lg transition-all duration-300 hover:-translate-y-2", lang === 'ar' ? 'text-right' : 'text-left')}>
                     <CardContent className="p-8">
-                      <div className={cn("relative z-10 mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner", lang === 'ar' ? 'mx-auto md:ml-auto md:mr-0' : 'mx-auto md:mr-auto md:ml-0')}>
+                      <div className={cn("relative z-10 mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner", lang === 'ar' ? 'ml-auto' : 'mr-auto')}>
                         {step.icon}
                       </div>
                       <h3 className="font-headline text-xl font-semibold text-primary">
@@ -241,7 +241,7 @@ export default function Home() {
               <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">
                 {t('projects_title')}
               </h2>
-              <p data-aos="fade-up" data-aos-delay="150" className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
+              <p data-aos="fade-up" data-aos-delay="150" className={cn("mb-12 max-w-2xl text-lg text-muted-foreground", lang === 'ar' ? '' : 'mx-auto')}>
                 {t('projects_subtitle')}
               </p>
             </div>
@@ -285,15 +285,15 @@ export default function Home() {
                   {t('contact_subtitle')}
                 </p>
                 <div className="space-y-4 pt-4">
-                  <div data-aos="fade-right" data-aos-delay="200" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end' : '')}>
+                  <div data-aos="fade-right" data-aos-delay="200" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end flex-row-reverse' : '')}>
                     <span>{t('working_hours')}</span>
                     <Clock className="h-5 w-5 text-accent" />
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="250" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end' : '')}>
+                  <div data-aos="fade-right" data-aos-delay="250" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end flex-row-reverse' : '')}>
                     <span>{t('location')}</span>
                     <MapPin className="h-5 w-5 text-accent" />
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="300" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end' : '')}>
+                  <div data-aos="fade-right" data-aos-delay="300" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end flex-row-reverse' : '')}>
                      <a href="https://wa.me/201029518786" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         {t('chat_whatsapp')}
                      </a>
