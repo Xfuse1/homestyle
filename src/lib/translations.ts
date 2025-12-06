@@ -96,7 +96,7 @@ export const messages: Messages = {
   project_4_title: { en: "Soft Blush Kids’ Room", ar: "غرف أطفال بألوان وردية" },
   project_4_desc: { en: "A playful kids' room in soft blush tones with joyful textures and cozy corners, designed for safety and organization.", ar: "غرفة أطفال مبهجة بدرجات اللون الوردي الناعم مع خامات مرحة وأركان دافئة، مصممة للأمان والتنظيم." },
   project_5_title: { en: "Modern Dining & Lounge with Coffee Corner", ar: "غرفة طعام وجلوس عصرية مع ركن قهوة" },
-  project_5_desc: { en: "An airy, modern dining space combining clean lines and warm materials for everyday meals and special gatherings.", ar: "مساحة طعام عصرية وجيدة التهوية تجمع بين الخطوط النظيفة والمواد الدافئة للوجبات اليومية والمناسبات الخاصة." },
+  project_5_desc: { en: "A modern dining space blending clean lines and warm materials, creating the perfect atmosphere for everyday meals and special gatherings.", ar: "مساحة طعام عصرية تجمع بين الخطوط الأنيقة والخامات الدافئة، مما يخلق أجواء مثالية للوجبات اليومية والتجمعات الخاصة." },
   project_6_title: { en: "Signature Contemporary Kitchen", ar: "مطبخ عصري مميز" },
   project_6_desc: { en: "A refreshing mint green kitchen that balances sleek style, smart storage, and natural light.", ar: "مطبخ عصري منعش باللون الأخضر النعناعي يوازن بين الأناقة، التخزين الذكي، والإضاءة الطبيعية." },
 
