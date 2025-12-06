@@ -140,7 +140,7 @@ export default function Home() {
         <section id="home" className="relative w-full overflow-hidden bg-background">
         <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-20 md:flex-row md:py-28 md:gap-10">
             {/* Left Column (Text) */}
-            <div className={cn("w-full md:w-2/5 max-w-md space-y-6 text-center", lang === "ar" ? "md:text-right md:order-2" : "md:text-left md:order-1")}>
+            <div className={cn("w-full md:w-2/5 max-w-md space-y-6 text-center md:text-left", lang === 'ar' ? 'md:text-right md:order-2' : 'md:order-1')}>
               <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl" data-aos="fade-right">
                 {t("hero_title")}
               </h1>
@@ -155,7 +155,7 @@ export default function Home() {
             </div>
 
             {/* Right Column (Video) */}
-            <div className={cn("mt-12 w-full md:mt-0 md:w-3/5 flex justify-center", lang === "ar" ? "md:justify-start md:order-1" : "md:justify-end md:order-2")} data-aos="fade-left">
+            <div className={cn("mt-12 w-full md:mt-0 md:w-3/5 flex justify-center", lang === 'ar' ? 'md:order-1' : 'md:order-2')} data-aos="fade-left">
               <div className="relative w-full max-w-3xl aspect-[4/3] md:aspect-video rounded-3xl bg-[#f6f3ea] overflow-hidden">
                 <video
                   src="https://bbzjxcjfmeoiojjnfvfa.supabase.co/storage/v1/object/sign/sara%20wep/vedio.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85MTllODRmNS02YWU3LTRjYTYtYWZiMS0yMDQyMjE1ZmY2ODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzYXJhIHdlcC92ZWRpby5tcDQiLCJpYXQiOjE3NjQ3NzMxODgsImV4cCI6MzE1NTM2NDc3MzE4OH0.4ynzLqxO98tuEoRX3pdkzEdui8458tVASwJQhta8Sk8"
@@ -174,7 +174,7 @@ export default function Home() {
         <section id="about" className="bg-card py-20 md:py-32">
           <div className="container mx-auto grid grid-cols-1 gap-12 px-4 lg:grid-cols-2 lg:items-center">
             <div className="lg:order-2">
-              <div className="mb-12 text-right">
+              <div className={cn("mb-12", lang === 'ar' ? 'text-right' : 'text-left')}>
                 <h2 data-aos="fade-up" className="font-headline text-3xl font-bold text-primary md:text-4xl">
                   {t("about_title")}
                 </h2>
@@ -187,9 +187,9 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 {processSteps.map((step, index) => (
-                  <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className="overflow-hidden rounded-lg bg-background text-right shadow-lg transition-all duration-300 hover:-translate-y-2">
+                  <Card key={index} data-aos="fade-up" data-aos-delay={index * 100} className={cn("overflow-hidden rounded-lg bg-background shadow-lg transition-all duration-300 hover:-translate-y-2", lang === 'ar' ? 'text-right' : 'text-left')}>
                     <CardContent className="p-8">
-                      <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner md:ml-auto md:mr-0">
+                      <div className={cn("relative z-10 mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-card shadow-inner", lang === 'ar' ? 'mx-auto md:ml-auto md:mr-0' : 'mx-auto md:mr-auto md:ml-0')}>
                         {step.icon}
                       </div>
                       <h3 className="font-headline text-xl font-semibold text-primary">
@@ -340,5 +340,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
