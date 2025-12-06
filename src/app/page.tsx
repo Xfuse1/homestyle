@@ -138,9 +138,9 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section id="home" className="relative w-full overflow-hidden bg-background">
-        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-20 md:flex-row md:py-28 md:gap-10">
-            {/* Left Column (Text) */}
-            <div className={cn("w-full md:w-2/5 max-w-md space-y-6 text-center md:text-left", lang === 'ar' ? 'md:text-right md:order-2' : 'md:order-1')}>
+          <div className="container mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2 md:py-28">
+            {/* Text Column */}
+            <div className={cn("space-y-6 text-center md:text-left", lang === 'ar' ? 'md:order-2 md:text-right' : 'md:order-1')}>
               <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl" data-aos="fade-right">
                 {t("hero_title")}
               </h1>
@@ -154,16 +154,16 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column (Video) */}
-            <div className={cn("mt-12 w-full md:mt-0 md:w-3/5 flex justify-center", lang === 'ar' ? 'md:order-1' : 'md:order-2')} data-aos="fade-left">
-              <div className="relative w-full max-w-3xl aspect-[4/3] md:aspect-video rounded-3xl bg-[#f6f3ea] overflow-hidden">
+            {/* Video Column */}
+            <div className={cn("mt-12 flex w-full justify-center md:mt-0", lang === 'ar' ? 'md:order-1' : 'md:order-2')} data-aos="fade-left">
+              <div className="relative aspect-[4/3] w-full max-w-3xl overflow-hidden rounded-3xl bg-[#f6f3ea] md:aspect-video">
                 <video
                   src="https://bbzjxcjfmeoiojjnfvfa.supabase.co/storage/v1/object/sign/sara%20wep/vedio.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85MTllODRmNS02YWU3LTRjYTYtYWZiMS0yMDQyMjE1ZmY2ODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzYXJhIHdlcC92ZWRpby5tcDQiLCJpYXQiOjE3NjQ3NzMxODgsImV4cCI6MzE1NTM2NDc3MzE4OH0.4ynzLqxO98tuEoRX3pdkzEdui8458tVASwJQhta8Sk8"
                   autoPlay
                   muted
                   loop
                   playsInline
-                  className="absolute inset-0 z-0 h-full w-[130%] left-1/2 -translate-x-1/2 object-cover"
+                  className="absolute inset-0 left-1/2 z-0 h-full w-[130%] -translate-x-1/2 object-cover"
                 ></video>
               </div>
             </div>
