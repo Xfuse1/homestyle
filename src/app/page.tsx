@@ -33,9 +33,11 @@ import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import SpotlightCard from "@/components/spotlight-card";
 import { cn } from "@/lib/utils";
 import anime from "animejs/lib/anime.es.js";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
   const hasAnimatedRef = useRef(false);
+  const { t, lang } = useLanguage();
 
   useEffect(() => {
     const el = document.querySelector(".sofa-hero");
@@ -131,7 +133,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex min-h-dvh flex-col bg-background">
+    <div className={cn("flex min-h-dvh flex-col bg-background", lang === 'ar' && 'font-arabic')}>
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
@@ -140,14 +142,14 @@ export default function Home() {
             {/* Left Column (Text) */}
             <div className="w-full md:w-2/5 max-w-md space-y-6 text-center md:text-left">
               <h1 className="font-headline text-4xl font-bold text-primary md:text-5xl lg:text-6xl" data-aos="fade-right">
-                Designing spaces that reflect you.
+                {t("hero_title")}
               </h1>
               <p className="text-lg text-muted-foreground" data-aos="fade-right" data-aos-delay="100">
-                Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.
+                {t("hero_subtitle")}
               </p>
               <div data-aos="fade-right" data-aos-delay="200">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-                  <Link href="#projects">Explore Our Work</Link>
+                  <Link href="#projects">{t('explore_work')}</Link>
                 </Button>
               </div>
             </div>
@@ -174,7 +176,7 @@ export default function Home() {
             <div className="lg:order-2">
               <div className="mb-12 text-right">
                 <h2 data-aos="fade-up" className="font-headline text-3xl font-bold text-primary md:text-4xl">
-                  A Trustworthy Partner for Your Dream Space
+                  {t("about_title")}
                 </h2>
                 <p data-aos="fade-up" data-aos-delay="150" className="mt-4 text-lg text-muted-foreground">
                   Home Stylist is a premier interior design and full finishing

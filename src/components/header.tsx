@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -17,6 +18,8 @@ const navLinks = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { lang, setLang, t } = useLanguage();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,8 +63,15 @@ export default function Header() {
         </nav>
         <div className="hidden items-center gap-2 md:flex">
           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="#contact">Book Consultation</Link>
+            <Link href="#contact">{t('book_consultation')}</Link>
           </Button>
+          <button
+            type="button"
+            onClick={() => setLang(lang === "en" ? "ar" : "en")}
+            className="ml-4 rounded-full border px-3 py-1 text-sm hover:bg-muted transition"
+          >
+            {lang === "en" ? "العربية" : "English"}
+          </button>
         </div>
         <div className="md:hidden">
           <Sheet>
@@ -80,9 +90,16 @@ export default function Header() {
                 <NavLinkItems isMobile />
                 <SheetClose asChild>
                   <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 mt-4">
-                    <Link href="#contact">Book Consultation</Link>
+                    <Link href="#contact">{t('book_consultation')}</Link>
                   </Button>
                 </SheetClose>
+                <button
+                  type="button"
+                  onClick={() => setLang(lang === "en" ? "ar" : "en")}
+                  className="mt-4 rounded-full border px-4 py-2 text-base hover:bg-muted transition"
+                >
+                  {lang === "en" ? "العربية" : "English"}
+                </button>
               </nav>
             </SheetContent>
           </Sheet>

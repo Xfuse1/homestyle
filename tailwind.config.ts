@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         body: ['"PT Sans"', 'sans-serif'],
         headline: ['"Playfair Display"', 'serif'],
+        arabic: ['"Tajawal"', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
