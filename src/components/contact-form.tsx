@@ -3,9 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useActionState } from "react";
 
-import { submitContactForm } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,6 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/context/LanguageContext";
 
 const contactSchema = z.object({
   fullName: z.string().min(2, { message: "Full name must be at least 2 characters." }),
@@ -31,6 +30,7 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 const WHATSAPP_NUMBER = "201029518786"; // Your WhatsApp number
 
 export default function ContactForm() {
+  const { t } = useLanguage();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -74,9 +74,9 @@ export default function ContactForm() {
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel>{t('form_full_name')}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your full name" {...field} />
+                  <Input placeholder={t('form_full_name_placeholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -89,9 +89,9 @@ export default function ContactForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel>{t('form_phone')}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your phone number" {...field} />
+                  <Input placeholder={t('form_phone_placeholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -104,9 +104,9 @@ export default function ContactForm() {
             name="location"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Location (City / Area)</FormLabel>
+                <FormLabel>{t('form_location')}</FormLabel>
                 <FormControl>
-                  <Input placeholder="e.g. Sohag, Akhmim" {...field} />
+                  <Input placeholder={t('form_location_placeholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -119,9 +119,9 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message (Optional)</FormLabel>
+                <FormLabel>{t('form_message')}</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Tell us about your project..." {...field} />
+                  <Textarea placeholder={t('form_message_placeholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -130,7 +130,7 @@ export default function ContactForm() {
         </div>
         <div data-aos="fade-up" data-aos-delay="600">
           <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-            Submit Request via WhatsApp
+            {t('form_submit_button')}
           </Button>
         </div>
       </form>

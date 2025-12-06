@@ -2,35 +2,28 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import {
-  Building,
-  CheckCircle,
   Construction,
   DraftingCompass,
   LayoutGrid,
   MapPin,
   MessageSquare,
   Paintbrush,
-  Phone,
-  ShoppingBag,
   Users,
   Wrench,
   Clock,
   Instagram,
   Facebook,
+  ShoppingBag,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-
 import Header from "@/components/header";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import BeforeAfterSlider from "@/components/before-after-slider";
 import ContactForm from "@/components/contact-form";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
-import SpotlightCard from "@/components/spotlight-card";
 import { cn } from "@/lib/utils";
 import anime from "animejs/lib/anime.es.js";
 import { useLanguage } from "@/context/LanguageContext";
@@ -83,52 +76,52 @@ export default function Home() {
       icon: (
         <LayoutGrid className="h-10 w-10 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
       ),
-      title: "Interior Design",
-      description: "2D & 3D visualization to bring your vision to life before execution.",
+      titleKey: "service_design_title",
+      descriptionKey: "service_design_desc",
     },
     {
       icon: (
         <Construction className="h-10 w-10 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
       ),
-      title: "Full Finishing & Contracting",
-      description: "Complete execution from plumbing and electrical to painting and flooring.",
+      titleKey: "service_finishing_title",
+      descriptionKey: "service_finishing_desc",
     },
     {
       icon: (
         <Users className="h-10 w-10 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
       ),
-      title: "Engineering Supervision",
-      description: "Dedicated project management to ensure quality and timely delivery.",
+      titleKey: "service_supervision_title",
+      descriptionKey: "service_supervision_desc",
     },
     {
       icon: (
         <ShoppingBag className="h-10 w-10 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110" />
       ),
-      title: "Furniture & Decor Styling",
-      description: "Sourcing and styling furniture, lighting, and decor to complete your space.",
+      titleKey: "service_furniture_title",
+      descriptionKey: "service_furniture_desc",
     },
   ];
 
   const processSteps = [
     {
       icon: <MessageSquare className="h-8 w-8 text-accent" />,
-      title: "Consultation",
-      description: "We start with a free consultation to understand your needs and vision.",
+      titleKey: "step_consultation_title",
+      descriptionKey: "step_consultation_desc",
     },
     {
       icon: <DraftingCompass className="h-8 w-8 text-accent" />,
-      title: "Design",
-      description: "Our team creates detailed 2D/3D designs for your approval.",
+      titleKey: "step_design_title",
+      descriptionKey: "step_design_desc",
     },
     {
       icon: <Paintbrush className="h-8 w-8 text-accent" />,
-      title: "Execution",
-      description: "We manage all finishing work with precision and high-quality materials.",
+      titleKey: "step_execution_title",
+      descriptionKey: "step_execution_desc",
     },
     {
       icon: <Wrench className="h-8 w-8 text-accent" />,
-      title: "Handover",
-      description: "We deliver your dream space, ready for you to enjoy.",
+      titleKey: "step_handover_title",
+      descriptionKey: "step_handover_desc",
     },
   ];
 
@@ -179,10 +172,7 @@ export default function Home() {
                   {t("about_title")}
                 </h2>
                 <p data-aos="fade-up" data-aos-delay="150" className="mt-4 text-lg text-muted-foreground">
-                  Home Stylist is a premier interior design and full finishing
-                  studio based in Sohag. We specialize in transforming spaces
-                  from concept to reality, handling every detail with precision
-                  and care.
+                  {t("about_subtitle")}
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -193,10 +183,10 @@ export default function Home() {
                         {step.icon}
                       </div>
                       <h3 className="font-headline text-xl font-semibold text-primary">
-                        {step.title}
+                        {t(step.titleKey)}
                       </h3>
                       <p className="mt-2 text-muted-foreground">
-                        {step.description}
+                        {t(step.descriptionKey)}
                       </p>
                     </CardContent>
                   </Card>
@@ -219,9 +209,9 @@ export default function Home() {
         {/* Services Section */}
         <section id="services" className="bg-white py-20 dark:bg-black/10 md:py-32">
           <div className="container mx-auto px-4 text-center">
-            <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">Our Services</h2>
+            <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">{t('services_title')}</h2>
             <p data-aos="fade-up" data-aos-delay="150" className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
-              We offer a complete suite of services to manage your project from start to finish.
+              {t('services_subtitle')}
             </p>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((service, index) => (
@@ -235,8 +225,8 @@ export default function Home() {
                     {service.icon}
                   </CardHeader>
                   <CardContent className="space-y-2">
-                    <CardTitle className="font-headline text-xl font-bold text-primary">{service.title}</CardTitle>
-                    <p className="text-muted-foreground">{service.description}</p>
+                    <CardTitle className="font-headline text-xl font-bold text-primary">{t(service.titleKey)}</CardTitle>
+                    <p className="text-muted-foreground">{t(service.descriptionKey)}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -249,10 +239,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center">
               <h2 data-aos="fade-up" className="mb-4 font-headline text-3xl font-bold text-primary md:text-4xl">
-                Selected Interiors & Finishing Projects
+                {t('projects_title')}
               </h2>
               <p data-aos="fade-up" data-aos-delay="150" className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
-                Explore some of our transformations and see the quality we deliver.
+                {t('projects_subtitle')}
               </p>
             </div>
             
@@ -286,32 +276,32 @@ export default function Home() {
         {/* Contact Section */}
         <section id="contact" className="bg-white py-20 dark:bg-black/10 md:py-32">
           <div className="container mx-auto px-4">
-            <div className="grid gap-12 lg:grid-cols-2">
-              <div className="space-y-4">
+            <div className={cn("grid gap-12 lg:grid-cols-2", lang === 'ar' ? 'text-right' : 'text-left')}>
+              <div className={cn("space-y-4", lang === 'ar' ? 'lg:order-2' : '')}>
                 <h2 data-aos="fade-right" className="font-headline text-3xl font-bold text-primary md:text-4xl">
-                  Book Your Free Consultation
+                  {t('contact_title')}
                 </h2>
                 <p data-aos="fade-right" data-aos-delay="150" className="text-lg text-muted-foreground">
-                  Tell us a bit about your project and we’ll get back to you to schedule a free consultation and site visit.
+                  {t('contact_subtitle')}
                 </p>
                 <div className="space-y-4 pt-4">
-                  <div data-aos="fade-right" data-aos-delay="200" className="flex items-center gap-3">
+                  <div data-aos="fade-right" data-aos-delay="200" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-end' : '')}>
+                    <span>{t('working_hours')}</span>
                     <Clock className="h-5 w-5 text-accent" />
-                    <span>Working Hours: Sat - Thu, 9am - 6pm</span>
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="250" className="flex items-center gap-3">
+                  <div data-aos="fade-right" data-aos-delay="250" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-end' : '')}>
+                    <span>{t('location')}</span>
                     <MapPin className="h-5 w-5 text-accent" />
-                    <span>Location: Sohag, Egypt</span>
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="300" className="flex items-center gap-3">
-                     <WhatsappIcon className="h-5 w-5 text-accent" />
+                  <div data-aos="fade-right" data-aos-delay="300" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-end' : '')}>
                      <a href="https://wa.me/201029518786" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        Chat on WhatsApp
+                        {t('chat_whatsapp')}
                      </a>
+                     <WhatsappIcon className="h-5 w-5 text-accent" />
                   </div>
                 </div>
               </div>
-              <Card className="p-6 shadow-lg" data-aos="fade-left">
+              <Card className={cn("p-6 shadow-lg", lang === 'ar' ? 'lg:order-1' : '')} data-aos="fade-left">
                 <CardContent className="p-0">
                   <ContactForm />
                 </CardContent>
@@ -334,7 +324,7 @@ export default function Home() {
               <WhatsappIcon className="h-6 w-6" />
             </Link>
           </div>
-          <p>&copy; {new Date().getFullYear()} Home Stylist. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {t('footer_copyright')}</p>
         </div>
       </footer>
     </div>

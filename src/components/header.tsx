@@ -2,24 +2,23 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { lang, setLang, t } = useLanguage();
 
+  const navLinks = [
+    { href: "#home", labelKey: "nav_home" },
+    { href: "#about", labelKey: "nav_about" },
+    { href: "#services", labelKey: "nav_services" },
+    { href: "#projects", labelKey: "nav_projects" },
+    { href: "#contact", labelKey: "nav_contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +38,7 @@ export default function Header() {
               "text-sm font-medium transition-colors hover:text-accent",
               isMobile && "block w-full p-4 text-lg"
             )}>
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           </Wrapper>
         )
@@ -81,7 +80,7 @@ export default function Header() {
                 <span className="sr-only">Open Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[80vw] bg-background">
+            <SheetContent side={lang === 'ar' ? 'right' : 'left'} className="w-[80vw] bg-background">
               <SheetTitle className="sr-only">Main Menu</SheetTitle>
               <SheetDescription className="sr-only">
                 Main navigation links for the website.
