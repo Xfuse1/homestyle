@@ -29,7 +29,7 @@ export const messages: Messages = {
   },
   about_subtitle: {
     en: "Home Stylist is a premier interior design and full finishing studio based in Sohag. We specialize in transforming spaces from concept to reality, handling every detail with precision and care.",
-    ar: "هوم ستايلست هو استوديو رائد للتصميم الداخلي والتشطيبات المتكاملة في سوهاج. نحن متخصصون في تحويل المساحات من مجرد فكرة إلى حقيقة، مع الاهتمام بأدق التفاصيل بحرفية وعناية.",
+    ar: "Home Stylist هو استوديو رائد للتصميم الداخلي والتشطيبات المتكاملة في سوهاج. نحن متخصصون في تحويل المساحات من مجرد فكرة إلى حقيقة، مع الاهتمام بأدق التفاصيل بحرفية وعناية.",
   },
   
   // Process Steps
@@ -93,7 +93,7 @@ export const messages: Messages = {
   project_2_desc: { en: "A warm, contemporary bedroom that layers soft textiles, a patterned rug, and ambient lighting to create a calm, restful retreat.", ar: "غرفة نوم معاصرة تجمع بين المنسوجات الناعمة، سجادة منقوشة، وإضاءة محيطة لخلق ملاذ هادئ ومريح." },
   project_3_title: { en: "Elegant Social Lounge", ar: "صالة جلوس أنيقة" },
   project_3_desc: { en: "A bright, open living space with clean lines, comfortable seating, and refined finishes designed for relaxed gatherings.", ar: "مساحة معيشة مشرقة ومفتوحة تتميز بخطوط نظيفة، مقاعد مريحة، وتشطيبات راقية مصممة للتجمعات المريحة." },
-  project_4_title: { en: "Soft Blush Kids’ Room", ar: "غرفة أطفال بألوان وردية" },
+  project_4_title: { en: "Soft Blush Kids’ Room", ar: "غرف أطفال بألوان وردية" },
   project_4_desc: { en: "A playful kids' room in soft blush tones with joyful textures and cozy corners, designed for safety and organization.", ar: "غرفة أطفال مبهجة بدرجات اللون الوردي الناعم مع خامات مرحة وأركان دافئة، مصممة للأمان والتنظيم." },
   project_5_title: { en: "Modern Dining & Lounge with Coffee Corner", ar: "غرفة طعام وجلوس عصرية مع ركن قهوة" },
   project_5_desc: { en: "An airy, modern dining space combining clean lines and warm materials for everyday meals and special gatherings.", ar: "مساحة طعام عصرية وجيدة التهوية تجمع بين الخطوط النظيفة والمواد الدافئة للوجبات اليومية والمناسبات الخاصة." },
@@ -122,5 +122,5 @@ export const messages: Messages = {
   form_submit_button: { en: "Submit Request via WhatsApp", ar: "أرسل الطلب عبر واتساب" },
 
   // Footer
-  footer_copyright: { en: "Home Stylist. All Rights Reserved.", ar: "هوم ستايلست. جميع الحقوق محفوظة." },
+  footer_copyright: { en: "Home Stylist. All Rights Reserved.", ar: "Home Stylist. جميع الحقوق محفوظة." },
 };
