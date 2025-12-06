@@ -264,7 +264,7 @@ export default function Home() {
                       <h3 className="font-headline text-lg font-bold text-primary">
                         {t(`${project.id.replace(/-/g, '_')}_title`)}
                       </h3>
-                      <p className="text-sm text-muted-foreground">{t(`${project.id.replace(/-/g, '_')}_desc`)}</p>
+                      <p className="text-base text-muted-foreground">{t(`${project.id.replace(/-/g, '_')}_desc`)}</p>
                     </div>
                   </CardContent>
                 </Card>
