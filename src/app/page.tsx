@@ -285,19 +285,19 @@ export default function Home() {
                   {t('contact_subtitle')}
                 </p>
                 <div className="space-y-4 pt-4">
-                  <div data-aos="fade-right" data-aos-delay="200" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end flex-row-reverse' : '')}>
-                    <span>{t('working_hours')}</span>
+                  <div data-aos="fade-right" data-aos-delay="200" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-start lg:justify-end flex-row-reverse' : '')}>
                     <Clock className="h-5 w-5 text-accent" />
+                    <span>{t('working_hours')}</span>
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="250" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end flex-row-reverse' : '')}>
-                    <span>{t('location')}</span>
+                  <div data-aos="fade-right" data-aos-delay="250" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-start lg:justify-end flex-row-reverse' : '')}>
                     <MapPin className="h-5 w-5 text-accent" />
+                    <span>{t('location')}</span>
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="300" className={cn("flex items-center gap-3", lang === 'ar' ? 'lg:justify-end flex-row-reverse' : '')}>
+                  <div data-aos="fade-right" data-aos-delay="300" className={cn("flex items-center gap-3", lang === 'ar' ? 'justify-start lg:justify-end flex-row-reverse' : '')}>
+                     <WhatsappIcon className="h-5 w-5 text-accent" />
                      <a href="https://wa.me/201029518786" target="_blank" rel="noopener noreferrer" className="hover:underline">
                         {t('chat_whatsapp')}
                      </a>
-                     <WhatsappIcon className="h-5 w-5 text-accent" />
                   </div>
                 </div>
               </div>
@@ -330,3 +330,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
