@@ -14,7 +14,7 @@ export const messages: Messages = {
   // Hero
   hero_title: {
     en: "Designing spaces that reflect you.",
-    ar: "نصمم مساحات تحاكي أحلامك",
+    ar: "تصاميم تحاكي واقع أحلامك",
   },
   hero_subtitle: {
     en: "Complete interior design and full finishing services in Sohag — design, execution, furnishing, and turnkey delivery.",
